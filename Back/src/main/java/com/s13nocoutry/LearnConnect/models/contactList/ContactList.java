@@ -1,20 +1,20 @@
-package com.s13nocoutry.LearnConnect.model.entity;
+package com.s13nocoutry.LearnConnect.models.contactList;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "contact-list")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-public class ContactList implements Serializable {
+@Setter
+public class ContactList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

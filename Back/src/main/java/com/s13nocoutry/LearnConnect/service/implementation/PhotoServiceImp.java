@@ -1,15 +1,15 @@
-package com.s13nocoutry.LearnConnect.service.impl;
+package com.s13nocoutry.LearnConnect.service.implementation;
 
-import com.s13nocoutry.LearnConnect.model.dao.PhotoDao;
-import com.s13nocoutry.LearnConnect.model.entity.Photo;
-import com.s13nocoutry.LearnConnect.service.PhotoService;
+import com.s13nocoutry.LearnConnect.repository.PhotoRepository;
+import com.s13nocoutry.LearnConnect.models.photo.Photo;
+import com.s13nocoutry.LearnConnect.service.abstraction.PhotoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class PhotoImplService implements PhotoService {
-    private final PhotoDao photoDao;
+public class PhotoServiceImp implements PhotoService {
+    private final PhotoRepository photoDao;
 
     @Override
     public void deletePhotoById(String id) {
