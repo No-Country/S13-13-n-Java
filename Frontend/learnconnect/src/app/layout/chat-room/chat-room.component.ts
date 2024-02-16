@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./chat-room.component.css']
 })
 export class ChatRoomComponent {
+  isLoading: boolean = true;
 
+  // Simula una operación asíncrona, como cargar datos de un servidor
+  ngOnInit() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 2000);
+  }
 }

@@ -1,1 +1,4 @@
 <p>chat-list works!</p>
+<ng-container *ngFor="let card of cardMessages ">
+  <app-card-message [cardContent]="card.content"></app-card-message>
+</ng-container>

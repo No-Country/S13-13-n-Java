@@ -4,9 +4,9 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'ellipsis'
 })
 export class EllipsisPipe implements PipeTransform {
-  
+
   /*Este pipe recibe un texto y devuelve el mismo texto truncado con puntos suspensivos si supera cierta longitud */
-  transform(value: string, maxLength: number = 20): string {
+  transform(value: string, maxLength: number = 21): string {
     if (value.length <= maxLength) {
       return value;
     } else {

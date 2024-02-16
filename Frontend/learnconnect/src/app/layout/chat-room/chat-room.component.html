@@ -1,1 +1,16 @@
-<p>chat-room works!</p>
+<div class="chat-container">
+  <div *ngIf="isLoading; else content">
+    <ng-template #loader>
+      <app-loader></app-loader>
+      <!-- Aquí se carga tu componente de loader -->
+    </ng-template>
+  </div>
+
+  <div class="chat">
+    <app-chat-list></app-chat-list>
+
+    <ng-template #content>
+      <p>Chat Room Works!</p>
+    </ng-template>
+  </div>
+</div>

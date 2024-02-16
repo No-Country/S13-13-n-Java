@@ -20,7 +20,16 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SidebarComponent,
     NotFoundComponent
   ],
-  imports: [
+  exports: [
+    AvatarComponent,
+    LoaderComponent,
+    SearchBoxComponent,
+    EllipsisPipe,
+    CardMessageComponent,
+    SidebarComponent,
+    NotFoundComponent
+  ],
+    imports: [
     CommonModule
   ]
 })

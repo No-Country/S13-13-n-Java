@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ChatListRoutingModule } from './chat-list-routing.module';
 import { ChatListComponent } from './chat-list.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,11 @@ import { ChatListComponent } from './chat-list.component';
   ],
   imports: [
     CommonModule,
-    ChatListRoutingModule
+    ChatListRoutingModule,
+    SharedModule
+  ],
+  exports: [
+    ChatListComponent
   ]
 })
 export class ChatListModule { }

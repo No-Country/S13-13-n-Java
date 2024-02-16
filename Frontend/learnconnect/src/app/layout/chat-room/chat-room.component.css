@@ -1,0 +1,10 @@
+.chat-container {
+  position: absolute;
+  margin-left: 20%; /* Debe coincidir con el ancho del sidebar */
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.chat-content {
+  padding: 20px; /* Añade un relleno para separar el contenido del borde */
+}
