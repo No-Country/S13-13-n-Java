@@ -1,5 +1,5 @@
 <div class="container">
-<app-sidebar></app-sidebar>
+<app-sidebar *ngIf="hasRoute('chat-room')"></app-sidebar>
 
 <router-outlet></router-outlet>
 
