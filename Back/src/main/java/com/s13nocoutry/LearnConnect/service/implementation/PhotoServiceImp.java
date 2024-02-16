@@ -27,7 +27,7 @@ public class PhotoServiceImp implements PhotoService {
                 .url(value.get("url").toString())
                 .build();
         photoRepository.delete(photo);
-        return response;git add .
+        return response;
     }
 
     @Override
