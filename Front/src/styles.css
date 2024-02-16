@@ -12,7 +12,6 @@ html {
 
 body {
   max-height: 100vh;
-  overflow-y: hidden;
   font-family: "Roboto", sans-serif;
 }
 
