@@ -19,7 +19,7 @@ public class Profile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String fullname;
+    private String fullName;
     private String description;
     //private Photo photo;
 }
