@@ -52,7 +52,7 @@ public class PhotoServiceImp implements PhotoService {
             photo = response.get();
             cloudinaryService.deletePhoto(photo.getPublicId());
             Map newPhotoCloudinary = cloudinaryService.upPhoto(multipartFile);
-            photo.setPublicId(newPhotoCloudinary.get("public_id").toString()); // Setear nuevos datos en el registro de la tabla con el id especifico
+            photo.setPublicId(newPhotoCloudinary.get("public_id").toString());
             photo.setName(newPhotoCloudinary.get("original_filename").toString());
             photo.setUrl(newPhotoCloudinary.get("url").toString());
             photoRepository.save(photo);
