@@ -6,6 +6,7 @@ import com.s13nocoutry.LearnConnect.repository.PhotoRepository;
 import com.s13nocoutry.LearnConnect.models.photo.Photo;
 import com.s13nocoutry.LearnConnect.service.abstraction.PhotoService;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -18,11 +19,12 @@ import java.util.Optional;
 public class PhotoServiceImp implements PhotoService {
     private final PhotoRepository photoRepository;
     private final CloudinaryService cloudinaryService;
+    private final ModelMapper modelMapper;
 
     @Override
     public PhotoResponse getById(Long id) {
         Photo photo = photoRepository.findById(id).orElse(null);
-        return (photo != null) ? new PhotoResponse(photo) : null;
+        return (photo != null) ? modelMapper.map(photo, PhotoResponse.class) : null;
     }
 
     @Override
@@ -56,13 +58,7 @@ public class PhotoServiceImp implements PhotoService {
             photo.setName(newPhotoCloudinary.get("original_filename").toString());
             photo.setUrl(newPhotoCloudinary.get("url").toString());
             photoRepository.save(photo);
-            return PhotoResponse
-                    .builder()
-                    .id(photo.getId())
-                    .publicId(photo.getPublicId())
-                    .name(photo.getName())
-                    .url(photo.getUrl())
-                    .build();
+            return modelMapper.map(photo, PhotoResponse.class);
         }
         return null;
     }
@@ -77,14 +73,7 @@ public class PhotoServiceImp implements PhotoService {
                 .name(value.get("original_filename").toString())
                 .url(value.get("url").toString())
                 .build();
-        Photo photo = Photo
-                .builder()
-                .id(photoRequest.getId())
-                .publicId(photoRequest.getPublicId())
-                .name(photoRequest.getName())
-                .url(photoRequest.getUrl())
-                .build();
-        photoRepository.delete(photo);
+        photoRepository.delete(modelMapper.map(photoRequest, Photo.class));
         return photoResponse;
     }
 

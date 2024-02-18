@@ -6,50 +6,38 @@ import com.s13nocoutry.LearnConnect.models.contactList.ContactListResponse;
 import com.s13nocoutry.LearnConnect.repository.ContactListRepository;
 import com.s13nocoutry.LearnConnect.service.abstraction.ContactListService;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class ContactListServiceImp implements ContactListService {
     private final ContactListRepository contactListRepository;
+    private final ModelMapper modelMapper;
 
     @Override
     public ContactListResponse getById(Long id) {
         ContactList contactList = contactListRepository.findById(id).orElse(null);
-        return (contactList != null) ? new ContactListResponse(contactList) : null;
+        return (contactList != null) ? modelMapper.map(contactList, ContactListResponse.class) : null;
     }
 
     @Override
     public List<ContactListResponse> getAllContactList() {
-        List<ContactList> contactLists = contactListRepository.findAll();
-        List<ContactListResponse> contactListResponseList = contactLists.stream().map(
-                contactList -> ContactListResponse
-                        .builder()
-                        .id(contactList.getId())
-                        .userId(contactList.getUserId())
-                        //.contacts(contactList.getContactList())
-                        .build()
-        ).toList();
-        return contactListResponseList;
+        List<ContactListResponse> contactListResponses = new ArrayList<>();
+        for (ContactList contactList : contactListRepository.findAll()) {
+            ContactListResponse contactListResponse = modelMapper.map(contactList, ContactListResponse.class);
+            contactListResponses.add(contactListResponse);
+        }
+        return contactListResponses;
     }
 
     @Override
     public ContactListResponse create(ContactListRequest contactListRequest) {
-        ContactList contactList = ContactList
-                .builder()
-                .id(contactListRequest.getId())
-                .userId(contactListRequest.getUserId())
-                //.contacts(contactListRequest.getContacts)
-                .build();
-        contactListRepository.save(contactList);
-        return ContactListResponse
-                .builder()
-                .id(contactList.getId())
-                .userId(contactList.getUserId())
-                //.contacts(contactList.getContacts)
-                .build();
+        ContactList contactList = contactListRepository.save(modelMapper.map(contactListRequest, ContactList.class));
+        return modelMapper.map(contactList, ContactListResponse.class);
     }
 
     @Override
@@ -59,19 +47,8 @@ public class ContactListServiceImp implements ContactListService {
 
     @Override
     public ContactListResponse delete(ContactListRequest contactListRequest) {
-        ContactList contactList = ContactList
-                .builder()
-                .id(contactListRequest.getId())
-                .userId(contactListRequest.getUserId())
-                //.contacts(contactListRequest.getContacts)
-                .build();
-        contactListRepository.delete(contactList);
-        return ContactListResponse
-                .builder()
-                .id(contactListRequest.getId())
-                .userId(contactListRequest.getUserId())
-                //.contacts(contactListRequest.getContacts)
-                .build();
+        contactListRepository.delete(modelMapper.map(contactListRequest, ContactList.class));
+        return modelMapper.map(contactListRequest, ContactListResponse.class);
     }
 
     @Override
