@@ -2,10 +2,22 @@
   <div class="container-chat-list">
     <!-- <div class="logo">Logo</div> -->
     <div class="search">
-      <input type="text" placeholder="Search..." v-model='keyword' ><!--@keyup.enter='filterChatList()'-->
+      <form [formGroup]="searchForm">
+        <input type="text" formControlName="searchCriteria" placeholder="Buscar">
+      </form>
     </div>
     <div class="chat-list">
+
+      <div *ngIf="isLoading; else chatList">
+
+      <app-loader></app-loader>
+    </div>
+
+    <ng-template #chatList>
       <app-chat-list ></app-chat-list>
+
+    </ng-template>
+
       <!-- <div class="chat-item">
         <div class="chat-icon">🖼️</div>
         <div class="chat-info">
@@ -50,7 +62,7 @@
   </div>
   <div class="main">
     <div class="header">
-      <div class="header-name">Nombre del Contacto</div>
+      <div class="header-name" >Nombre del Contacto</div>
     </div>
     <div class="messages">
       <div class="message sent">
@@ -134,22 +146,3 @@
   </div>
 </div>
 
-
-
-<!-- <div class="chat-container">
-  <div *ngIf="isLoading; else content">
-    <ng-template #loader>
-      <app-loader></app-loader>
-
-    </ng-template>
-  </div>
-
-  <div class="chat">
-    <app-chat-list ></app-chat-list>
-<button *ngIf="chatList"></button>
-    <ng-template #content>
-      <p>Chat Room Works!</p>
-    </ng-template>
-  </div>
-</div>
- -->

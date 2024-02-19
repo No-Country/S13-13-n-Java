@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ChatRoomRoutingModule } from './chat-room-routing.module';
 import { ChatRoomComponent } from './chat-room.component';
 import { ChatListModule } from '../chat-list/chat-list.module';
+
+import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 
@@ -14,6 +16,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     ChatRoomRoutingModule,
     ChatListModule,
+    ReactiveFormsModule,
     SharedModule
   ]
 })
