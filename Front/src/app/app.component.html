@@ -1,6 +1,15 @@
 <div class="container">
 <app-sidebar *ngIf="hasRoute('chat-room')"></app-sidebar>
 
-<router-outlet></router-outlet>
+<div *ngIf="isLoading; else mainContent">
+  <!-- Mostrar el spinner aquí -->
+  <app-loader></app-loader>
+</div>
+
+<ng-template #mainContent>
+  <!-- Contenido principal --><router-outlet></router-outlet>
+  
+</ng-template>
+
 
 </div>
