@@ -1,0 +1,6 @@
+<div class="photo_cover" [style.background-image]="'url(' + imageUrl + ')'">
+  <img class="photo" [src]="imageUrl" (error)="onImageError()" />
+  <div class="error_avatar" *ngIf="imageError">
+    <img src="./assets/icons/img.svg" alt="avatar" width="30px" height="30px">
+  </div>
+</div>

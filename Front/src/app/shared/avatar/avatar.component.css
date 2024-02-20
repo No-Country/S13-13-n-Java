@@ -1,0 +1,5 @@
+.photo_cover{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}

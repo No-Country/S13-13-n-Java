@@ -1,0 +1,25 @@
+<nav>
+  <div>
+    <img src="logo.svg" class="logo">
+
+    <button routerLink="/chat-list"><img src="./assets/icons/chats.svg" alt="Mensajes" width="30px" height="30px"></button>
+    <button routerLink="/contacts"><img src="./assets/icons/contacts.svg" alt="Contactos" width="30px" height="30px"></button>
+  </div>
+
+  <div>
+      <hr width="40px">
+
+      <button routerLink="/profile" style="margin-bottom: 1rem;"><img src="./assets/icons/user.svg" alt="Perfil" width="30px" height="30px"></button>
+
+
+      <div>
+        <input type="checkbox" id="themeSwitch" (change)="toggleTheme()">
+        <label for="themeSwitch" class="switch">
+          <img src="./assets/icons/sun.svg" alt="sun_icon" class="sun-icon" width="20px">
+          <img src="./assets/icons/moon.svg" alt="moon_icon" class="moon-icon" width="20px">
+
+        </label>
+      </div>
+      <button>Salir</button>
+  </div>
+</nav>
