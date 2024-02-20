@@ -10,6 +10,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
+
 @NgModule({
   declarations: [
     AvatarComponent,
@@ -27,7 +28,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     EllipsisPipe,
     CardMessageComponent,
     SidebarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+
   ],
     imports: [
     CommonModule

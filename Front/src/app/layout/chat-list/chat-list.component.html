@@ -1,5 +1,6 @@
 <div class="scrollable-container" [@filterAnimation]="messageTotal">
 <p>chat-list works!</p>
+<app-search-box></app-search-box>
 <ng-container *ngFor="let card of cardMessages ">
   <app-card-message [cardContent]="card.content" [sender]="card.sender"></app-card-message>
 </ng-container>
