@@ -1,8 +1,8 @@
-package com.s13nocoutry.LearnConnect.room.service.impl;
+package com.s13nocoutry.LearnConnect.service.implementation;
 
-import com.s13nocoutry.LearnConnect.room.model.Room;
-import com.s13nocoutry.LearnConnect.room.repository.RoomRepository;
-import com.s13nocoutry.LearnConnect.room.service.IRoomService;
+import com.s13nocoutry.LearnConnect.models.room.Room;
+import com.s13nocoutry.LearnConnect.repository.RoomRepository;
+import com.s13nocoutry.LearnConnect.service.abstraction.IRoomService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

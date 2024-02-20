@@ -1,4 +1,4 @@
-package com.s13nocoutry.LearnConnect.room.controller;
+package com.s13nocoutry.LearnConnect.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageMapping;

@@ -1,7 +1,6 @@
-package com.s13nocoutry.LearnConnect.room.service;
+package com.s13nocoutry.LearnConnect.service.abstraction;
 
-import com.s13nocoutry.LearnConnect.models.user.User;
-import com.s13nocoutry.LearnConnect.room.model.Room;
+import com.s13nocoutry.LearnConnect.models.room.Room;
 
 import java.util.List;
 

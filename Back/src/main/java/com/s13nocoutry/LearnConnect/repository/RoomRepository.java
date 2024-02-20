@@ -1,6 +1,6 @@
-package com.s13nocoutry.LearnConnect.room.repository;
+package com.s13nocoutry.LearnConnect.repository;
 
-import com.s13nocoutry.LearnConnect.room.model.Room;
+import com.s13nocoutry.LearnConnect.models.room.Room;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
