@@ -57,4 +57,26 @@ public class UserServiceImp implements UserService {
         }
         userRepository.deleteById(id);
     }
+
+    public void connectUser(User user){
+        user.setStatus("ONLINE");
+        userRepository.save(user);
+    }
+
+    public void disconnect(User user){
+
+        var storedUser = userRepository.findById(user.getId())
+                .orElse(null);
+
+        if (storedUser != null) {
+            storedUser.setStatus("OFFLINE");
+            userRepository.save(storedUser);
+        }
+
+
+    }
+
+    public List<User> findConnectedUsers(){
+        return userRepository.findAllByStatus("ONLINE");
+    }
 }

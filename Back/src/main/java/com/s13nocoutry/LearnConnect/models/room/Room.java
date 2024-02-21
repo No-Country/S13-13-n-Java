@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -23,7 +23,7 @@ public class Room {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id")
     private Chat chat;
-    private List<User> users;
+    private Set<User> users;
     private Boolean block;
     private Boolean silent;
 }

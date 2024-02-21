@@ -16,6 +16,7 @@ import java.util.List;
 public class MessageServiceImp implements MessageService {
 
     private static final MessageRepository messageRepository = null;
+    private final RoomService roomService;
 
     @Override
     public Message sendMessage(String content, User user) {
@@ -35,10 +36,10 @@ public class MessageServiceImp implements MessageService {
     @Autowired
 
     public static void saveMessage(Message message) {
-
+        // aca habria que analizar tmb el modo de guardado de los mensajes dentro de un chat? para donde va el cascade de persistencia?
         messageRepository.save(message);
     }
-       }
+}
 
 
 

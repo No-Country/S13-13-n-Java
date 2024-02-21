@@ -27,7 +27,7 @@ public class RoomService implements IRoomService {
     @Override
     public Room create(Room room) {
         return roomRepository.save(room);
-    }
+    } // como manejamos la creacion del chat para el room? lo hacemos persistencia por cascada, y lo manjemaos desde el controller de room?
 
     @Override
     public Room update(Room room) {
@@ -41,4 +41,8 @@ public class RoomService implements IRoomService {
     public void deleteById(Long id) {
         roomRepository.deleteById(id);
     }
+
+    // TODO: agregar servicios de busqueda de room por bloqueados o silenciados
+
+    // Como vamos a hacer para recuperar el room por alguna identificacion? por el idDelChat?, por los usuarios que participan en la room? no deberia tener la room un nombre del grupo?
 }

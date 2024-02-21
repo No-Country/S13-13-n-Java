@@ -18,6 +18,7 @@ public class Message {
 
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
+ // aqui no falta el id de la entidad?
  private String content;
 @ManyToOne
 @JoinColumn(name = "id")
