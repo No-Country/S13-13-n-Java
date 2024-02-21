@@ -1,9 +1,11 @@
 package com.s13nocoutry.LearnConnect.models.Message;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import com.s13nocoutry.LearnConnect.models.Chat.Chat;
+import com.s13nocoutry.LearnConnect.models.user.User;
+import jakarta.persistence.*;
 import lombok.*;
 
+import javax.print.attribute.standard.MediaSize;
 import java.util.Date;
 
 @Entity
@@ -13,7 +15,16 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Message {
+
+ @Id
+ @GeneratedValue(strategy = GenerationType.IDENTITY)
  private String content;
+@ManyToOne
+@JoinColumn(name = "id")
  private User user;
  private Date hour;
+@ManyToOne
+@JoinColumn(name = "id")
+private Chat chat;
+
 }
