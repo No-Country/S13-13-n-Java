@@ -1,5 +1,6 @@
 package com.s13nocoutry.LearnConnect.models.room;
 
+import com.s13nocoutry.LearnConnect.models.Chat.Chat;
 import com.s13nocoutry.LearnConnect.models.user.User;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
