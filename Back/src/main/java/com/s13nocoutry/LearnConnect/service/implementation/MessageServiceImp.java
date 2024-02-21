@@ -1,9 +1,11 @@
 package com.s13nocoutry.LearnConnect.service.implementation;
 
 import com.s13nocoutry.LearnConnect.models.Message.Message;
+import com.s13nocoutry.LearnConnect.models.user.User;
 import com.s13nocoutry.LearnConnect.repository.MessageRepository;
 import com.s13nocoutry.LearnConnect.service.abstraction.MessageService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -13,9 +15,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MessageServiceImp implements MessageService {
 
-    private final MessageRepository messageRepository;
+    private static final MessageRepository messageRepository = null;
 
-@Override
+    @Override
     public Message sendMessage(String content, User user) {
         Message message = new Message();
         message.setContent(content);
@@ -30,4 +32,15 @@ public class MessageServiceImp implements MessageService {
     }
 
 
-}
+    @Autowired
+
+    public static void saveMessage(Message message) {
+
+        messageRepository.save(message);
+    }
+       }
+
+
+
+
+
