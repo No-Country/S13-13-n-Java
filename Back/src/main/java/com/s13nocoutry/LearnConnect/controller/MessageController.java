@@ -1,9 +1,11 @@
 package com.s13nocoutry.LearnConnect.controller;
 
-import com.s13nocoutry.LearnConnect.models.Message.Message;
-import com.s13nocoutry.LearnConnect.service.abstraction.MessageService;
-import com.s13nocoutry.LearnConnect.service.implementation.MessageServiceImp;
+import com.s13nocoutry.LearnConnect.models.Chat.ChatRequest;
+import com.s13nocoutry.LearnConnect.models.Chat.ChatResponse;
+import com.s13nocoutry.LearnConnect.service.implementation.ChatServiceImpl;
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
@@ -12,14 +14,12 @@ import org.springframework.stereotype.Controller;
 @RequiredArgsConstructor
 public class MessageController {
 
+    private final ChatServiceImpl chatServiceImpl;
+    
     @MessageMapping("/message")
     @SendTo("/topic/message")
-
-
-    public Message handleMessage(Message message) throws Exception {
-        MessageServiceImp.saveMessage(message);
-
-        return message;
-
+    public ChatResponse handleMessage(@DestinationVariable Long roomId, ChatRequest chat) throws Exception {
+        ChatResponse chatResponse = chatServiceImpl.createChat(chat);
+        return chatResponse;
     }
 }

@@ -6,20 +6,23 @@ import com.s13nocoutry.LearnConnect.models.Chat.ChatResponse;
 import com.s13nocoutry.LearnConnect.repository.ChatRepository;
 import com.s13nocoutry.LearnConnect.service.abstraction.ChatService;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
+
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class ChatServiceImpl implements ChatService {
-    @Autowired
-    private ChatRepository chatRepository;
-    @Autowired
-    private ModelMapper modelMapper;
+    
+    private final ChatRepository chatRepository;
+    
+    private final ModelMapper modelMapper;
+    
+    private final MessageServiceImp messageServiceImp;
 
     @Override
     public ChatResponse getChatById(Long chatId) {
@@ -37,6 +40,7 @@ public class ChatServiceImpl implements ChatService {
 
     @Override
     public ChatResponse createChat(ChatRequest chatRequest) {
+        
         Chat chat = chatRepository.save(modelMapper.map(chatRequest, Chat.class));
         return modelMapper.map(chat, ChatResponse.class);
     }

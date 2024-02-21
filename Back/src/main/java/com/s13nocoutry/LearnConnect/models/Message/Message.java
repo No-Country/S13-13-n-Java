@@ -5,7 +5,6 @@ import com.s13nocoutry.LearnConnect.models.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 
-import javax.print.attribute.standard.MediaSize;
 import java.util.Date;
 
 @Entity
@@ -18,7 +17,8 @@ public class Message {
 
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
- private String content;
+ private Long id;
+ private String  content;
 @ManyToOne
 @JoinColumn(name = "id")
  private User user;
