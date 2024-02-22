@@ -11,7 +11,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
-public class MessageReponse {
+public class MessageResponse {
 
     private String content;
     private User user;
