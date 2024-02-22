@@ -1,23 +1,30 @@
-package com.s13nocoutry.LearnConnect.models.profile;
+package com.s13nocoutry.LearnConnect.models.profilePicture;
 
 import com.s13nocoutry.LearnConnect.models.user.User;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Profile {
+@Builder
+public class ProfilePicture {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
-    private String fullName;
-    private String description;
+
+    @Column(name = "publicId")
+    private String publicId;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "url")
+    private String url;
+
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;
