@@ -1,7 +1,5 @@
 package com.s13nocoutry.LearnConnect.controller;
 
-;
-
 import com.s13nocoutry.LearnConnect.models.Message.Message;
 import com.s13nocoutry.LearnConnect.models.user.UserResponse;
 import com.s13nocoutry.LearnConnect.service.abstraction.MessageService;
@@ -10,15 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
-import java.security.Principal;
 import java.util.List;
 
 @RestController
 @RequestMapping("/messages")
 public class MessageController {
    @Autowired
-    private MessageService messageService;
+   private MessageService messageService;
    private UserService userService;
 
    @PostMapping("/send")
@@ -39,12 +35,4 @@ public class MessageController {
        messageService.saveMessage(message);
        return ResponseEntity.ok().build();
    }
-
 }
-
-
-
-
-
-
-

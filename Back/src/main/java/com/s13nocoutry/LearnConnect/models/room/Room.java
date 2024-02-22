@@ -2,10 +2,7 @@ package com.s13nocoutry.LearnConnect.models.room;
 
 import com.s13nocoutry.LearnConnect.models.Chat.Chat;
 import com.s13nocoutry.LearnConnect.models.user.User;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,8 +20,11 @@ public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @OneToOne
+    @JoinColumn(name = "id")
     private Chat chat;
-    private List<User> users;
+//    @OneToMany
+//    private List<User> users;
     private Boolean block;
     private Boolean silent;
 }

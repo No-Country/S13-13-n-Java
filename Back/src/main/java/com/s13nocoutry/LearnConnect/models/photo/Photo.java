@@ -1,5 +1,6 @@
 package com.s13nocoutry.LearnConnect.models.photo;
 
+import com.s13nocoutry.LearnConnect.models.Chat.Chat;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,4 +27,9 @@ public class Photo {
 
     @Column(name = "url")
     private String url;
+
+    @ManyToOne
+    @JoinColumn(name = "chat_id", referencedColumnName = "id")
+    private Chat chat;
+
 }
