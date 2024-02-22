@@ -1,13 +1,14 @@
 package com.s13nocoutry.LearnConnect.models.user;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.s13nocoutry.LearnConnect.models.contactList.ContactList;
+import com.s13nocoutry.LearnConnect.models.room.Room;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -22,4 +23,8 @@ public class User {
     private String password;
     private String state;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private ContactList contactList;
+    @ManyToMany(mappedBy = "users")
+    private List<Room> rooms;
 }

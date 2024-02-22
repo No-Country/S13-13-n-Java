@@ -1,9 +1,12 @@
 package com.s13nocoutry.LearnConnect.models.contactList;
 
+import com.s13nocoutry.LearnConnect.models.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "contact-list")
@@ -21,6 +24,6 @@ public class ContactList {
     @Column(name = "user_id")
     private Long userId;
 
-    //@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    //private Set<User> contacts = new HashSet<>();;
+    @OneToMany
+    private Set<User> userList = new HashSet<>();;
 }

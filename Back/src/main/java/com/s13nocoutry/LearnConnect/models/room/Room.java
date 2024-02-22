@@ -20,11 +20,15 @@ public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToOne
-    @JoinColumn(name = "id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "chat_id", referencedColumnName = "id")
     private Chat chat;
-//    @OneToMany
-//    private List<User> users;
+    @ManyToMany
+    @JoinTable(
+            name = "room_user",
+            joinColumns = @JoinColumn(name = "room_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id"))
+    private List<User> users;
     private Boolean block;
     private Boolean silent;
 }
