@@ -1,6 +1,5 @@
 package com.s13nocoutry.LearnConnect.models.profile;
 
-import com.s13nocoutry.LearnConnect.models.photo.Photo;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

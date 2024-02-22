@@ -20,10 +20,11 @@ public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     @JoinColumn(name = "id")
     private Chat chat;
-    private List<User> users;
+//    @OneToMany
+//    private List<User> users;
     private Boolean block;
     private Boolean silent;
 }
