@@ -1,21 +1,21 @@
 .container {
   display: flex;
   height: 100vh;
-  margin-left: 6%;
+  margin-left: 5%;
+  background: rgba(220, 212, 209, 1);
+
+  border-radius: 0 35px 35px 0;
+  padding: 12px;
 }
 
 .container-chat-list {
-  width: 20%;
-  background-color: #f0f0f0;
-  border-right: 2px solid gray;
+  width: 23%;
+  border-top: 2px solid gray;
+  background-image: url("../../../assets/images/background-image.png");
+  background-size: 30px 30px;
+  background-color: #e9eaeb;
+  border-radius: 35px 0 0 35px;
 }
-
-/* .logo {
-  height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
 .search {
   height: 10%;
@@ -26,6 +26,7 @@
 
 .chat-list {
   height: 80%;
+  margin-top: 1rem;
   /* overflow-y: scroll; */
 }
 
@@ -64,24 +65,110 @@
 }
 
 .main {
-  width: 60%;
-  background-color: white;
+  width: 55%;
+  border-top: 2px solid gray;
+  border-radius: 0 35px 35px 0;
+  background-image: url("../../../assets/images/background-image.png");
+  background-size: 30px 30px;
+  background-color: #e9eaeb;
 }
 
 .header {
   height: 10%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  border-bottom: 2px solid gray;
 }
 
 .header-name {
+  font-family: "Monserrat", sans-serif;
+  font-size: 24px;
   font-weight: bold;
+  margin-left: 1rem;
+}
+.header-connected {
+
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-size: 16px;
+  color: #35b285;
+  margin-left: 1rem;
+  padding: 3px;
+  background-color: #fff;
+  border-radius: 13px;
+  width: 70px;
+}
+.header-connected::before{
+  content: '🟢 ';
+  font-size: 0.7em;
+  margin-left: 4px;
+  transform: scale(2);
+  line-height: 1em;
+}
+
+
+
+
+/* search */
+.search-box-message{
+  text-align: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#search {
+  background: rgba(0, 0, 0, 0)
+    url('../../../assets/icons/search.svg')
+    no-repeat 14px 14px;
+  text-indent: 1em;
+  display: inline-block;
+  border: 0 none;
+  width: 0;
+  height: 3em;
+  border-radius: 3em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: none;
+  padding: 1em 1.5em;
+  cursor: pointer;
+  /* -webkit-appearance: none; */
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  color: #999;
+  vertical-align: baseline;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+#search:hover,
+#search:focus {
+  background: #fff
+    url('../../../assets/icons/search.svg')
+    14px 14px no-repeat;
+}
+
+#search:focus {
+  width: 100%;
+  cursor: text;
+}
+
+/* search-fin */
+
+.more-options{
+  border: none;
+  background: none;
+  margin-right: 25px;
 }
 
 .messages {
-  height: 80%;
+  height: 75%;
   overflow-y: scroll;
 }
 
@@ -89,123 +176,71 @@
   max-width: 60%;
   margin: 10px;
   padding: 10px;
-  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .sent {
   margin-left: auto;
   background-color: #e0e0e0;
+  border-radius: 10px 10px 0 10px;
 }
 
 .received {
   margin-right: auto;
   background-color: #f0f0f0;
+  border-radius: 10px 10px 10px 0;
 }
 
 .input-message {
-  height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 2px solid gray;
+  width: 95%;
+  height: 70px;
+  margin: auto;
+
+  border-radius: 15px;
+  background: rgba(220, 212, 209, 1);
+  gap: 15px;
 }
-/* //////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* .footer-icon {
-  width: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+
+input {
+  width: 80%;
+  padding: 10px 20px 10px 40px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 7px;
+
+  outline: none;
+  font-size: 16px;
+}
+.btn-import {
+  border: none;
+  background-color: transparent;
+}
+
+.btn-send {
+  /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=af203b&c2=f54868&gt=l&gd=dtl
+  */
+  background: #af203b;
+  background: linear-gradient(135deg, #af203b, #f54868);
+  border: none;
+  border-radius: 25%;
+  transition: transform 0.3s;
+  width: 43px;
+  height: 46px;
+}
+.icon-send {
+  filter: invert(100%);
+  width: 20px;
+  height: 20px;
+}
 
 .sidebar-right {
-  width: 20%;
-  background-color: #f0f0f0;
-  border-left: 2px solid gray;
+  width: 23%;
+  max-height: 70%;
+  margin-left: 10px;
 }
-
-.contact {
-  height: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 2px solid gray;
-}
-
-.contact-name {
-  font-weight: bold;
-}
-
-.contact-status {
-  color: gray;
-}
-
-.connected {
-  height: 40%;
-  overflow-y: scroll;
-}
-
-.connected-item {
-  height: 20%;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid gray;
-}
-
-.connected-icon {
-  width: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.connected-name {
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.images {
-  height: 40%;
-  overflow-y: scroll;
-}
-
-.images-item {
-  height: 20%;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid gray;
-}
-
-.images-icon {
-  width: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.images-info {
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* .chat-container {
-  position: absolute;
-  margin-left: 20%;
-  min-height: 100vh;
-  background-color: #ffffff;
-}
-
-.chat-content {
-  padding: 20px;
-}
-.chat-container{
-  border: 1px solid #e0e0e0;
-  border-radius: 25px;
-  margin-top: 1rem;
-  max-height: 95vh;
-}
- */

@@ -1,0 +1,37 @@
+.contact-profile{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.name-status{
+  margin-left: 1rem;
+}
+
+.contact-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+
+  font-weight: bold;
+  align-items: flex-start;
+}
+
+.contact-status {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  color: #35b285;
+}
+
+.contact-status::before{
+  content: '🟢 ';
+  font-size: 0.7em;
+  margin-left: 4px;
+  transform: scale(2);
+  line-height: 1em;
+}

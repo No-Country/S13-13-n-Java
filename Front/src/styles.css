@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+:root {
+  --Dark-mode: #202b3b;
+  --Light-mode: #dcd4d1;
+  --Primary: #f54768;
+  --Secondary: #ff9678;
+  --Featured: #982d7a;
+  --Important: #35b285;
+}
+
 *,
 *::after,
 *::before {
@@ -12,17 +23,41 @@ html {
 
 body {
   max-height: 100vh;
-  font-family: "Roboto", sans-serif;
+  background-image: url('./assets/images/microbiologia.jpg');
+  background-size: cover;
+  font-family: "Monserrat", sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+h3, h4, h5{
+  font-family: "Monserrat", sans-serif;
+}
+
+h3{
+  font-size: 20px;
+}
+
+h4{
+  font-size: 16px;
+}
+
+h5{
+  font-size: 14px;
+}
+
+p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
 }
 
 /* Estilos para el tema light */
 .light-theme {
-  background-color: #ffffff;
+  background-color: var(--Light-mode);
   color: #000000;
 }
 
 /* Estilos para el tema dark */
 .dark-theme {
-  background-color: #1f1f1f;
+  background-color: var(--Dark-mode);
   color: #ffffff;
 }

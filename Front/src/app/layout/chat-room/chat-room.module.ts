@@ -6,6 +6,8 @@ import { ChatListModule } from '../chat-list/chat-list.module';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ProfileModule } from '../profile/profile.module';
+import { ColumnRightModule } from '../column-right/column-right.module';
 
 
 @NgModule({
@@ -16,6 +18,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     ChatRoomRoutingModule,
     ChatListModule,
+    ProfileModule,
+    ColumnRightModule,
     ReactiveFormsModule,
     SharedModule
   ]

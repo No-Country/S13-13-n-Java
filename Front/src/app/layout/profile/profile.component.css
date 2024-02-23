@@ -1,0 +1,51 @@
+.card {
+  width: auto;
+  margin: 2px;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
+.card-header h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.card-header p {
+  margin-top: 0;
+  font-size: 14px;
+  color: #999;
+}
+
+.card-header::before{
+  content: '🟢 ';
+  font-size: 0.7em;
+  margin-left: 4px;
+  transform: scale(2);
+  line-height: 1em;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-body img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.card:hover .card-body {
+  background-color: #f7f7f7;
+}

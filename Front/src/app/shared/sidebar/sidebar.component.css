@@ -1,11 +1,11 @@
 nav {
   position: absolute;
   width: 80px;
-  background-color: #f0f0f0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: rgba(220, 212, 209, 1);
   border-start-start-radius: 25px;
   border-bottom-left-radius: 25px;
 }
@@ -16,8 +16,9 @@ nav div {
 
 .logo{
   width: 100%;
-  padding: 8px;
-  margin: 8px;
+  padding: 2px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -26,6 +27,7 @@ button {
   width: 100%;
   padding: 8px;
   margin: auto;
+  background-color: transparent;
   margin-bottom: 5px;
   border: none;
   cursor: pointer;
@@ -42,8 +44,12 @@ hr{
   width: 30px;
   height: 60px;
   margin-left: 5px;
-  background-color: #ccc;
+  background-color: #babdc2;
   border-radius: 15px;
+}
+
+.switch::after{
+  background-color: black;
 }
 
 .switch::before {
@@ -53,7 +59,13 @@ hr{
   left: 2px;
   width: 26px;
   height: 26px;
-  background-color: white;
+    /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=af203b&c2=f54868&gt=l&gd=dtl
+  */
+  background: #AF203B;
+  background: linear-gradient(135deg, #AF203B, #F54868);
+
   border-radius: 50%;
   transition: transform 0.3s;
 }
