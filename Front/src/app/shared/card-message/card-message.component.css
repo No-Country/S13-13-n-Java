@@ -1,4 +1,4 @@
-.card{
+/* .card{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,4 +8,77 @@
   padding: 10px;
   margin: 5px;
   gap: 1rem;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
+.card-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+
+}
+
+
+.card span {
+  margin-top: 0;
+  font-size: 14px;
+  color: #999;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-body p {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+
+
+ */
+
+ .card {
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  background-color: #FCFBFA;
+  margin-bottom: 0.8rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  max-width: 400px;
+
+}
+
+/* .card:first-child{
+  border-right: 15px solid var(--Important);
+} */
+
+.avatar {
+  border-radius: 10px;
+  margin: auto 0 auto auto;
+}
+
+.content {
+  padding: 15px;
+  width: calc(100% - 60px); /* Make sure the content doesn't overlap with the avatar */
+}
+
+h4 {
+ margin-bottom: 5px;
+}
+
+p {
+ font-size: smaller;
+ color: grey;
+}
+
+span{
+  float: right;
 }

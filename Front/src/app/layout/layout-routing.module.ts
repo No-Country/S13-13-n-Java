@@ -11,7 +11,8 @@ const routes: Routes =[
       { path: 'register', loadChildren: () => import('./auth/register/register.module').then(m => m.RegisterModule) },
       { path: 'login', loadChildren: () => import('./auth/login/login.module').then(m => m.LoginModule) },
       { path: 'chat-room', loadChildren: () => import('./chat-room/chat-room.module').then(m => m.ChatRoomModule) },
-      { path: 'chatList', loadChildren: () => import('./chat-list/chat-list.module').then(m => m.ChatListModule) }
+      { path: 'chatList', loadChildren: () => import('./chat-list/chat-list.module').then(m => m.ChatListModule) },
+      { path: 'column-right', loadChildren: () => import('./column-right/column-right.module').then(m => m.ColumnRightModule) },
     ]
   },
 

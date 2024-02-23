@@ -1,22 +1,16 @@
 <div class="container">
   <div class="container-chat-list">
-    <!-- <div class="logo">Logo</div> -->
     <div class="search">
-      <form [formGroup]="searchForm">
-        <input type="text" formControlName="searchCriteria" placeholder="Buscar">
-      </form>
+      <app-search-box></app-search-box>
     </div>
     <div class="chat-list">
-
       <div *ngIf="isLoading; else chatList">
+        <app-loader></app-loader>
+      </div>
 
-      <app-loader></app-loader>
-    </div>
-
-    <ng-template #chatList>
-      <app-chat-list ></app-chat-list>
-
-    </ng-template>
+      <ng-template #chatList>
+        <app-chat-list></app-chat-list>
+      </ng-template>
 
       <!-- <div class="chat-item">
         <div class="chat-icon">🖼️</div>
@@ -62,87 +56,99 @@
   </div>
   <div class="main">
     <div class="header">
-      <div class="header-name" >Nombre del Contacto</div>
+      <div>
+        <div class="header-name">Nombre del Contacto</div>
+
+        <div class="header-connected">
+          online
+        </div>
+      </div>
+
+      <div class="search-box-message">
+        <input type="text" id="search" />
+         <button class="more-options"><img src="../../../assets/icons/more.svg"></button>
+      </div>
+
+
     </div>
+
     <div class="messages">
       <div class="message sent">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+        odio. Praesent libero.
       </div>
       <div class="message received">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+        odio. Praesent libero.
       </div>
       <div class="message sent">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+        odio. Praesent libero.
       </div>
       <div class="message received">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+        odio. Praesent libero.
       </div>
       <div class="message sent">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+        odio. Praesent libero.
       </div>
       <div class="message received">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+        odio. Praesent libero.
       </div>
     </div>
     <div class="input-message">
-      <div class="images-icon">🖼️</div>
-      <input type="text">
-      <button>➤</button>
-<!--       <div class="footer-icon">📷</div>
-      <div class="footer-icon">🎥</div>
-      <div class="footer-icon">🎵</div>
-      <div class="footer-icon">📄</div> -->
+      <div class="images-icon">
+        <button class="btn-import">
+          <img src="../../../assets/icons/img2.svg" alt="" />
+        </button>
+      </div>
+      <input type="text" />
+      <button class="btn-send">
+        <img class="icon-send" src="../../../assets/icons/send.svg" alt="" />
+      </button>
     </div>
   </div>
+
   <div class="sidebar-right">
-    <div class="contact">
-      <div class="contact-name">Fran Noval</div>
-      <div class="contact-status">🟢 online </div>
+    <app-column-right></app-column-right>
+    <!--     <div class="contact">
+      <app-profile></app-profile>
     </div>
+    <div class="column-right">
     <div class="connected">
+
+      <div class="contact-profile">
+        <div class="contact-avatar">
+           <app-avatar></app-avatar></div>
+        <div class="name-status">
+          <h2 class="contact-name">Contactos conectados</h2>
+          <p class="contact-status">10 contactos</p>
+        </div>
+      </div>
+
       <div class="connected-item">
-        <div class="connected-icon">🟢 online</div>
-        <div class="connected-name">David </div>
+        <app-card-profile></app-card-profile>
       </div>
       <div class="connected-item">
-        <div class="connected-icon">🟢 online</div>
-        <div class="connected-name">Geraldine</div>
+        <app-card-profile></app-card-profile>
       </div>
       <div class="connected-item">
-        <div class="connected-icon">🔴 offline</div>
-        <div class="connected-name">Bruno</div>
+        <app-card-profile></app-card-profile>
       </div>
       <div class="connected-item">
-        <div class="connected-icon">🔴 offline</div>
-        <div class="connected-name">Matias</div>
+        <app-card-profile></app-card-profile>
       </div>
       <div class="connected-item">
-        <div class="connected-icon">🟢 online</div>
-        <div class="connected-name">Oliver</div>
+        <app-card-profile></app-card-profile>
+
       </div>
     </div>
     <div class="images">
-      <div class="images-item">
-        <div class="images-icon">🖼️</div>
-        <div class="images-info">Imagenes compartidas 7 Fotos</div>
-      </div>
-      <div class="images-item">
-        <div class="images-icon">🖼️</div>
-        <div class="images-info">Imagenes compartidas 6 Fotos</div>
-      </div>
-      <div class="images-item">
-        <div class="images-icon">🖼️</div>
-        <div class="images-info">Imagenes compartidas 5 Fotos</div>
-      </div>
-      <div class="images-item">
-        <div class="images-icon">🖼️</div>
-        <div class="images-info">Imagenes compartidas 4 Fotos</div>
-      </div>
-      <div class="images-item">
-        <div class="images-icon">🖼️</div>
-        <div class="images-info">Imagenes compartidas 3 Fotos</div>
-      </div>
+      <app-card-images></app-card-images>
+
     </div>
+  </div> -->
   </div>
 </div>
-

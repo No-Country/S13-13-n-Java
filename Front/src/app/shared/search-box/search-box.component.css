@@ -1,0 +1,38 @@
+#s {
+  background: rgb(255, 255, 255)
+    url('../../../assets/icons/search.svg')
+    no-repeat 14px 14px;
+  text-indent: 1em;
+  display: inline-block;
+  border: 0 none;
+  width: auto;
+  margin: 50px 20px;
+  height: 3em;
+  border-radius: 3em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: none;
+  padding: 1em 1.5em;
+  cursor: pointer;
+  /* -webkit-appearance: none; */
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  color: #000;
+  vertical-align: baseline;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* #s:hover,
+#s:focus {
+  background: #fff
+    url('../../../assets/icons/search.svg')
+    14px 14px no-repeat;
+}
+
+#s:focus {
+  width: 100%;
+  cursor: text;
+} */

@@ -1,1 +1,15 @@
-<p>profile works!</p>
+<app-card-profile></app-card-profile>
+
+<div class="card" *ngIf="mostrar()">
+  <div class="card-header">
+    <h2>{{ profile.nombre }}</h2>
+    <p>{{ profile.estado }}</p>
+  </div>
+ <!--  <div class="card-body">
+    <app-avatar></app-avatar>
+    <h2>{{ profile.nombre }}</h2>
+    <p>Email</p>
+    <p>Password</p>
+    <p>{{ profile.descripcion }}</p>
+  </div> -->
+</div>

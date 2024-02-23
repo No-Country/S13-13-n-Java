@@ -7,6 +7,9 @@ import { EllipsisPipe } from './ellipsis.pipe';
 import { CardMessageComponent } from './card-message/card-message.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FooterComponent } from './footer/footer.component';
+import { CardProfileComponent } from './card-profile/card-profile.component';
+import { CardImagesComponent } from './card-images/card-images.component';
 
 
 
@@ -19,7 +22,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
     EllipsisPipe,
     CardMessageComponent,
     SidebarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FooterComponent,
+    CardProfileComponent,
+    CardImagesComponent
   ],
   exports: [
     AvatarComponent,
@@ -27,9 +33,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SearchBoxComponent,
     EllipsisPipe,
     CardMessageComponent,
+    CardProfileComponent,
+    CardImagesComponent,
     SidebarComponent,
     NotFoundComponent,
-
+    FooterComponent
   ],
     imports: [
     CommonModule
