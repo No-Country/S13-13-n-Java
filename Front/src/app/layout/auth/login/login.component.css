@@ -1,0 +1,19 @@
+.container_login{
+display:flex;
+justify-content:center;
+align-items: center;
+max-width: 100vh;
+flex-direction: row;
+
+
+}
+
+.box_1{
+ background-color: red;
+ width: 50%;
+}
+
+.box_2{
+  background-color: blue;
+  width:50%;
+}

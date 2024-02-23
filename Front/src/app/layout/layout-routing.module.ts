@@ -13,8 +13,10 @@ const routes: Routes =[
       { path: 'chat-room', loadChildren: () => import('./chat-room/chat-room.module').then(m => m.ChatRoomModule) },
       { path: 'chatList', loadChildren: () => import('./chat-list/chat-list.module').then(m => m.ChatListModule) },
       { path: 'column-right', loadChildren: () => import('./column-right/column-right.module').then(m => m.ColumnRightModule) },
+      { path: 'contact-book', loadChildren: () => import('./contact-book/contact-book.module').then(m => m.ContactBookModule) }
     ]
   },
+
 
 
 ];
