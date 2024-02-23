@@ -21,7 +21,7 @@ public class MessageServiceImp implements MessageService {
     public Message sendMessage(String content, UserResponse user) {
         Message message = new Message();
         message.setContent(content);
-        message.setUser(user);
+        //message.setUser(user);
         message.setHour(new Date());
         return messageRepository.save(message);
     }
@@ -31,13 +31,12 @@ public class MessageServiceImp implements MessageService {
         return messageRepository.findAll();
     }
 
-
-    @Autowired
-
+    @Override
     public void saveMessage(Message message) {
-
         messageRepository.save(message);
     }
+
+
 }
 
 

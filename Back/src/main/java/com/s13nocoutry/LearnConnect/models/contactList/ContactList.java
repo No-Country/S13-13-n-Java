@@ -21,8 +21,9 @@ public class ContactList {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "user_id")
-    private Long userId;
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @OneToMany
     private Set<User> userList = new HashSet<>();;
