@@ -1,6 +1,5 @@
 package com.s13nocoutry.LearnConnect.models.user;
 
-import com.s13nocoutry.LearnConnect.models.contactList.ContactList;
 import com.s13nocoutry.LearnConnect.models.room.Room;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -22,9 +21,6 @@ public class User {
     private String email;
     private String password;
     private String state;
-
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    private ContactList contactList;
     @ManyToMany(mappedBy = "users")
     private List<Room> rooms;
 }

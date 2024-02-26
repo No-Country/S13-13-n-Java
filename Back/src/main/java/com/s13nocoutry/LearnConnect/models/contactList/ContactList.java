@@ -14,16 +14,13 @@ import java.util.Set;
 @AllArgsConstructor
 @Getter
 @Setter
-@Builder
 public class ContactList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-
-    @Column(name = "user_id")
-    private Long userId;
-
+    @OneToOne
+    private User user;
     @OneToMany
-    private Set<User> userList = new HashSet<>();;
+    private Set<User> users = new HashSet<>();;
 }
