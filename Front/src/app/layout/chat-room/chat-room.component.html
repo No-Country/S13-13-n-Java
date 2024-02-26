@@ -4,13 +4,15 @@
       <app-search-box></app-search-box>
     </div>
     <div class="chat-list">
-      <div *ngIf="isLoading; else chatList">
+      <!-- <div *ngIf="isLoading; else chatList">
         <app-loader></app-loader>
-      </div>
-
-      <ng-template #chatList>
+      </div> -->
+      <app-contact-book></app-contact-book>
+      <!-- <app-chat-list ></app-chat-list> -->
+      <!-- <ng-template #chatList>
         <app-chat-list></app-chat-list>
-      </ng-template>
+      </ng-template> -->
+
 
       <!-- <div class="chat-item">
         <div class="chat-icon">🖼️</div>

@@ -1,8 +1,8 @@
 .scrollable-container{
   max-height: 75vh;
-  
-  overflow-y: scroll;
 
+  overflow-y: scroll;
+ 
 }
 
 .scroll-button {

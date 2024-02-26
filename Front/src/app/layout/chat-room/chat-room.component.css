@@ -2,7 +2,7 @@
   display: flex;
   height: 100vh;
   margin-left: 5%;
-  background: rgba(220, 212, 209, 1);
+  background: var(--DM-Normal-active);
 
   border-radius: 0 35px 35px 0;
   padding: 12px;
@@ -10,10 +10,10 @@
 
 .container-chat-list {
   width: 23%;
-  border-top: 2px solid gray;
+  border-top: 2px solid var(--DM-Darker);
   background-image: url("../../../assets/images/background-image.png");
   background-size: 30px 30px;
-  background-color: #e9eaeb;
+  background-color: #061524;
   border-radius: 35px 0 0 35px;
 }
 
@@ -66,11 +66,11 @@
 
 .main {
   width: 55%;
-  border-top: 2px solid gray;
+  border-top: 2px solid var(--DM-Darker);
   border-radius: 0 35px 35px 0;
   background-image: url("../../../assets/images/background-image.png");
   background-size: 30px 30px;
-  background-color: #e9eaeb;
+  background-color:#061524;
 }
 
 .header {
@@ -88,6 +88,7 @@
   font-size: 24px;
   font-weight: bold;
   margin-left: 1rem;
+  color: var(--LM-Normal);
 }
 .header-connected {
 
@@ -97,7 +98,7 @@
   color: #35b285;
   margin-left: 1rem;
   padding: 3px;
-  background-color: #fff;
+  background-color: var(--DM-Normal);
   border-radius: 13px;
   width: 70px;
 }
@@ -149,7 +150,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 #search:hover,
 #search:focus {
-  background: #fff
+  background: var(--DM-Normal)
     url('../../../assets/icons/search.svg')
     14px 14px no-repeat;
 }
@@ -181,13 +182,15 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .sent {
   margin-left: auto;
-  background-color: #e0e0e0;
+  background: var(--DM-Normal);
+  color:var(--LM-Normal);
   border-radius: 10px 10px 0 10px;
 }
 
 .received {
   margin-right: auto;
-  background-color: #f0f0f0;
+  background: var(--DM-Normal);
+  color:var(--LM-Normal);
   border-radius: 10px 10px 10px 0;
 }
 
@@ -200,7 +203,7 @@ input[type="search"]::-webkit-search-cancel-button {
   margin: auto;
 
   border-radius: 15px;
-  background: rgba(220, 212, 209, 1);
+  background: var(--DM-Normal-active);
   gap: 15px;
 }
 
@@ -221,12 +224,7 @@ input {
 }
 
 .btn-send {
-  /*
-  * Created with https://www.css-gradient.com
-  * Gradient link: https://www.css-gradient.com/?c1=af203b&c2=f54868&gt=l&gd=dtl
-  */
-  background: #af203b;
-  background: linear-gradient(135deg, #af203b, #f54868);
+  background: rgba(0, 0, 0, 0);
   border: none;
   border-radius: 25%;
   transition: transform 0.3s;
@@ -234,13 +232,13 @@ input {
   height: 46px;
 }
 .icon-send {
-  filter: invert(100%);
+cursor: pointer;
   width: 20px;
   height: 20px;
 }
 
 .sidebar-right {
   width: 23%;
-  max-height: 70%;
+
   margin-left: 10px;
 }

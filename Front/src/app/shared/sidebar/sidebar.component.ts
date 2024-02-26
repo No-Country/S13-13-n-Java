@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ThemeService } from 'src/app/services/theme.service';
+import { ViewsService } from 'src/app/services/views.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,7 +8,8 @@ import { ThemeService } from 'src/app/services/theme.service';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  constructor(private themeService: ThemeService) {}
+
+  constructor(private themeService: ThemeService, private viewService: ViewsService) {}
 
   toggleTheme(): void {
     const newTheme = this.themeService.currentTheme === 'light' ? 'dark' : 'light';

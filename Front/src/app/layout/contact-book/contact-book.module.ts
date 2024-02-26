@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { ContactBookRoutingModule } from './contact-book-routing.module';
 import { ContactBookComponent } from './contact-book.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+
 
 
 @NgModule({
@@ -11,7 +13,11 @@ import { ContactBookComponent } from './contact-book.component';
   ],
   imports: [
     CommonModule,
-    ContactBookRoutingModule
+    ContactBookRoutingModule,
+    SharedModule
+  ],
+  exports: [
+    ContactBookComponent
   ]
 })
 export class ContactBookModule { }

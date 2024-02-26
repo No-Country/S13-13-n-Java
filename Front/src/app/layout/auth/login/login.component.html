@@ -1,8 +1,27 @@
-<div class="container-login">
-  <div class="box_1">
-    <h2>Login</h2>
-  </div>
-  <div class="box_2">
-    <p>Hola</p>
-  </div>
+<div class="form-login">
+  <h1 class="title-form">Inicia Sesion</h1>
+  <form action="">
+    <div class="insert-email">
+      <label for="email" class="label-email">Email:</label>
+      <br />
+      <input type="text" id="email" name="email" />
+    </div>
+    <div class="insert-password">
+      <label for="password" class="label-pass">Password:</label>
+      <br />
+      <input type="password" id="password" name="password" />
+      <div class="info">
+        <p>
+          Debe ser una combinación de un mínimo de 8 letras, números y simbolos
+        </p>
+      </div>
+    </div>
+    <br />
+    <button type="submit" id="btn-login">Inicia Sesión</button>
+  </form>
+  <br />
+  <p class="link-register">
+    ¿Ya tiene una cuenta?
+    <a routerLink="/register" class="link-r">Registrate</a>
+  </p>
 </div>

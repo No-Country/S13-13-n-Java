@@ -3,40 +3,81 @@
   /* Created with Neumorphism.io
   * Link: https://neumorphism.io/ */
   border-radius: 32px;
-  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  background: linear-gradient(145deg, var(--DM-Normal-active), var(--DM-Normal-active));
   /* box-shadow: 24px 24px 47px #dedede, -24px -24px 47px #e2e2e2; */
   background-clip: padding-box;
 
-  border-top: 2px solid gray;
+  border-top: 2px solid var(--DM-Darker);
+
+
+
 
 }
 
 .card-title{
-  text-align: center;
+  display: flex;
+    align-content: flex-end;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    padding-top: 1rem;
   padding: 1rem;
-  border-bottom: 2px  solid rgba(255, 255, 255, 0.1);
+  color:var(--LM-Normal);
+  /* border-bottom: 2px solid rgba(255, 255, 255, 0.1); */
 }
 
-.card-body{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5px;
-  margin: 15px;
-  max-width: 800px;
 
-  padding-bottom: 1rem;
+
+.card-body{
+
+  padding:1rem;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:3px;
+
+
+
+}
+.photos{
+  font-family: "Nanum Pen Script", cursive;
+  color:var(--Feature-Normal);
 }
 
 .img-shared{
-  overflow: hidden;
   border-radius: 15px;
   align-self: end;
-  width: 90px;
-  height: 90px;
+
+  max-width: 50%;
+  max-height: auto;
 }
 
-img {
-  width: 100%;
-  height: 100%;
+.icon-images{
+width: 30px;
+height: 30px;
+}
+/* img {
+
   object-fit: cover;
+} */
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow-y: scroll;
+  max-height: calc(36vh - 64px) ;
+}
+
+.gallery .img-shared {
+  margin: 0 7px 7px 0;
+}
+
+.img-shared{
+  width: 93px;
+  height: 93px;
 }

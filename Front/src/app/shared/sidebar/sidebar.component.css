@@ -5,7 +5,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: rgba(220, 212, 209, 1);
+  background: var(--DM-Normal-active);
   border-start-start-radius: 25px;
   border-bottom-left-radius: 25px;
 }
@@ -35,7 +35,7 @@ button {
 
 hr{
   margin: auto;
-  background-color: black;
+  background-color: var(--LM-Darker);
 }
 
 .switch {
@@ -44,7 +44,7 @@ hr{
   width: 30px;
   height: 60px;
   margin-left: 5px;
-  background-color: #babdc2;
+  background-color: var(--DM-Darker);
   border-radius: 15px;
 }
 

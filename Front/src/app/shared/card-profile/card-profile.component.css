@@ -17,6 +17,7 @@
   text-align: left;
 
   font-weight: bold;
+  color: var(--LM-Light);
   align-items: flex-start;
 }
 

@@ -1,12 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import "../node_modules/reset-css/reset.css";
 
 :root {
-  --Dark-mode: #202b3b;
-  --Light-mode: #dcd4d1;
-  --Primary: #f54768;
-  --Secondary: #ff9678;
-  --Featured: #982d7a;
-  --Important: #35b285;
+  --DM-Light: #e9eaeb;
+  --DM-Light-hover: #dedfe2;
+  --DM-Light-active: #babdc2;
+  --DM-Normal: #202b3b;
+  --DM-Normal-hover: #1d2735;
+  --DM-Normal-active: #1a222f;
+  --DM-Dark: #18202c;
+  --DM-Dark-hover: #131a23;
+  --DM-Dark-active: #0e131b;
+  --DM-Darker: #0b0f15;
+
+  --LM-Light: #fcfbfa;
+  --LM-Light-hover: #faf9f8;
+  --LM-Light-active: #f4f2f1;
+  --LM-Normal: #dcd4d1;
+  --LM-Normal-hover: #c6bfbc;
+  --LM-Normal-active: #b0aaa7;
+  --LM-Dark: #a59f9d;
+  --LM-Dark-hover: #847f7d;
+  --LM-Dark-active: #635f5e;
+  --LM-Darker: #4d4a49;
+
+  --Primary-Light: #feedf0;
+  --Primary-Light-hover: #fee3e8;
+  --Primary-Light-active: #fcc6d0;
+  --Primary-Normal: #f54768;
+  --Primary-Normal-hover: #dd405e;
+  --Primary-Normal-active: #c43953;
+  --Primary-Dark: #b8354e;
+  --Primary-Dark-hover: #832b3e;
+  --Primary-Dark-active: #6e202f;
+  --Primary-Darker: #561924;
+
+  --Secondary-Light: #fff5f2;
+  --Secondary-Light-hover: #ffefeb;
+  --Secondary-Light-active: #ffded5;
+  --Secondary-Normal: #ff9678;
+  --Secondary-Normal-hover: #e6876c;
+  --Secondary-Normal-active: #cc7860;
+  --Secondary-Dark: #bf715a;
+  --Secondary-Dark-hover: #995a48;
+  --Secondary-Dark-active: #734436;
+  --Secondary-Darker: #59352a;
+
+  --Feature-Light: #f5eaf2;
+  --Feature-Light-hover: #f0e0eb;
+  --Feature-Light-active: #dfbed6;
+  --Feature-Normal: #982d7a;
+  --Feature-Normal-hover: #89296e;
+  --Feature-Normal-active: #7a2462;
+  --Feature-Dark: #72225c;
+  --Feature-Dark-hover: #5b1b49;
+  --Feature-Dark-active: #441437;
+  --Feature-Darker: #35102b;
+
+  --Important-Light: #ebf7f3;
+  --Important-Light-hover: #e1f3ed;
+  --Important-Light-active: #c0e7d9;
+  --Important-Normal: #35b285;
+  --Important-Normal-hover: #30a078;
+  --Important-Normal-active: #2a8e6a;
+  --Important-Dark: #288664;
+  --Important-Dark-hover: #206b50;
+  --Important-Dark-active: #18503c;
+  --Important-Darker: #133e2f;
 }
 
 *,
@@ -23,31 +83,33 @@ html {
 
 body {
   max-height: 100vh;
- /*  background-image: url('./assets/images/microbiologia.jpg');
-  */ background-size: cover;
+  /*  background-image: url('./assets/images/microbiologia.jpg');
+  */
+  background-size: cover;
   font-family: "Monserrat", sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-
-h3, h4, h5{
+h3,
+h4,
+h5 {
   font-family: "Monserrat", sans-serif;
 }
 
-h3{
+h3 {
   font-size: 20px;
 }
 
-h4{
+h4 {
   font-size: 16px;
 }
 
-h5{
+h5 {
   font-size: 14px;
 }
 
-p{
-  font-family: 'Roboto', sans-serif;
+p {
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
 }
 
