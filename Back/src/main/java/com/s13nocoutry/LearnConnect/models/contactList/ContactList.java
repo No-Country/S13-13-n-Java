@@ -14,13 +14,17 @@ import java.util.Set;
 @AllArgsConstructor
 @Getter
 @Setter
+@Builder
 public class ContactList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
     @OneToOne
+    @JoinColumn(name = "user_id")
     private User user;
+
     @OneToMany
     private Set<User> users = new HashSet<>();;
 }

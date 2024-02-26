@@ -34,8 +34,7 @@ public class MessageServiceImp implements MessageService {
         return messageRepository.findAll();
     }
 
-
-    @Autowired
+    @Override
     public void saveMessage(Message message) {
         messageRepository.save(message);
     }
