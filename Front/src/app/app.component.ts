@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterEvent } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +8,20 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
+  
 
   constructor(private router: Router) {}
 
   // Simula la carga de datos (por ejemplo, después de una solicitud HTTP)
   ngOnInit() {
-    
+
   }
 
   hasRoute(route:string){
     return this.router.url.includes(route);
   }
+
+
 
 
 }

@@ -1,8 +1,13 @@
 .column-right{
-  overflow-y: scroll;
-  background-color: #f0f0f0;
+  background-color: var(--DM-Normal);
   border-radius: 35px;
-  height: 500px;
+
+
+  /* probando  */
+  display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 
 }
 
@@ -14,7 +19,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #f0f0f0;
+    background-color:var(--DM-Normal);
     margin-bottom: 8px;
     width: auto;
     height: 67px;
@@ -27,18 +32,31 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 17px;
+  color: var(--LM-Normal);
   letter-spacing: 0em;
   text-align: left;
   font-weight: bold;
 }
 
 .contact-status {
-  color: var(--Featured);
+  color: var(--Secondary-Normal);
 }
 
 .connected {
   border-radius: 0 35px 35px 0;
   max-height: 84vh;
+}
+
+.contact-list{
+  overflow-y: scroll;
+ max-height: calc(45vh - 74px);/* Height of the header (73px) + Padding top and bottom (16px * 2 = 32px)*/
+
+}
+
+@media screen and (min-height:780px) {
+.contact-list{
+  max-height: calc(60vh - 74px);
+}
 }
 
 /* ///////////////////////////// */
@@ -48,9 +66,10 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 1rem;
+/*   margin-top: 1rem; */
   margin-bottom: 1rem;
   margin-left: 1rem;
+  padding-top: 1rem;
 }
 
 .name-status{
@@ -102,10 +121,7 @@
 
  .images {
   height: 25%;
-  margin: 0.5rem;
-
-
-  overflow-y: scroll;
+  margin:0 4px;
 
 }
 

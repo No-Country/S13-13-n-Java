@@ -1,1 +1,43 @@
-<p>register works!</p>
+<div class="contenedor"><div style="display: flex; justify-content: center; align-items: center;"><img src="../../../../assets/logo/Principal_Logo_LC_frase.svg" alt=""></div>
+
+<div class="form-register">
+  <h1 class="title-form">Registrate</h1>
+  <form action="">
+    <div class="name">
+      <div>
+        <label for="name" class="label-name">Nombre:</label>
+        <br />
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <label for="lastname" class="label-lastname">Apellido:</label>
+        <br />
+        <input type="text" id="lastname" name="lastname" />
+      </div>
+    </div>
+
+    <div class="insert-email">
+      <label for="email" class="label-email">Email:</label>
+      <br />
+      <input type="text" id="email" name="email" />
+    </div>
+    <div class="insert-password">
+      <label for="password" class="label-pass">Password:</label>
+      <br />
+      <input type="password" id="password" name="password" />
+      <div class="info">
+        <p>
+          Debe ser una combinación de un mínimo de 8 letras, números y simbolos
+        </p>
+      </div>
+    </div>
+    <br />
+    <button type="submit" id="btn-register">Registrarse</button>
+  </form>
+  <br />
+  <p class="link-login">
+    ¿Ya tiene una cuenta?
+    <a routerLink="/login" class="link-l">Inicie sesión</a>
+  </p>
+</div>
+</div>

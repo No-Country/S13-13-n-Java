@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProfileModule } from '../profile/profile.module';
 import { ColumnRightModule } from '../column-right/column-right.module';
+import { ContactBookModule } from '../contact-book/contact-book.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ColumnRightModule } from '../column-right/column-right.module';
     ChatListModule,
     ProfileModule,
     ColumnRightModule,
+    ContactBookModule,
     ReactiveFormsModule,
     SharedModule
   ]
