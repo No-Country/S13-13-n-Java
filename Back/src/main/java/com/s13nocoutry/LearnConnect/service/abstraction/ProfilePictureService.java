@@ -11,6 +11,6 @@ public interface ProfilePictureService {
     ProfilePictureResponse getById(Long id);
     ProfilePictureResponse create(MultipartFile multipartFile) throws IOException;
     ProfilePictureResponse update(Long id, MultipartFile multipartFile) throws IOException;
-    ProfilePictureResponse delete(ProfilePictureRequest profilePictureRequest) throws IOException;
+    ProfilePictureResponse delete(Long id) throws IOException;
     boolean existsById(Long id);
 }
