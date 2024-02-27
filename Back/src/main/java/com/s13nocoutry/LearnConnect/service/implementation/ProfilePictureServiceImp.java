@@ -1,10 +1,10 @@
 package com.s13nocoutry.LearnConnect.service.implementation;
 
 import com.s13nocoutry.LearnConnect.models.profilePicture.ProfilePicture;
-import com.s13nocoutry.LearnConnect.models.profilePicture.ProfilePictureRequest;
 import com.s13nocoutry.LearnConnect.models.profilePicture.ProfilePictureResponse;
 import com.s13nocoutry.LearnConnect.repository.ProfilePictureRepository;
 import com.s13nocoutry.LearnConnect.service.abstraction.ProfilePictureService;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -64,8 +64,9 @@ public class ProfilePictureServiceImp implements ProfilePictureService {
     }
 
     @Override
-    public ProfilePictureResponse delete(ProfilePictureRequest profilePictureRequest) throws IOException {
-        String publicId = profilePictureRequest.getPublicId();
+    public ProfilePictureResponse delete(Long id) throws IOException {
+        ProfilePicture profilePicture = profilePictureRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Foto no encontrada en base de datos con id: " + id));
+        String publicId = profilePicture.getPublicId();
         Map value = cloudinaryService.deletePhoto(publicId);
         ProfilePictureResponse profilePictureResponse = ProfilePictureResponse
                 .builder()
@@ -73,7 +74,7 @@ public class ProfilePictureServiceImp implements ProfilePictureService {
                 .name(value.get("original_filename").toString())
                 .url(value.get("url").toString())
                 .build();
-        profilePictureRepository.delete(modelMapper.map(profilePictureRequest, ProfilePicture.class));
+        profilePictureRepository.delete(profilePicture);
         return profilePictureResponse;
     }
 

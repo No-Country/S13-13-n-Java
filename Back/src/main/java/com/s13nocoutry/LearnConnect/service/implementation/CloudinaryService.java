@@ -14,13 +14,13 @@ import java.util.Objects;
 
 @Service
 public class CloudinaryService {
-    private Cloudinary cloudinary;
-    private Map<String, String> values = new HashMap<>();
+    private final Cloudinary cloudinary;
 
     public CloudinaryService() {
-        this.values.put("cloud_name", "dlv3mg6uk");
-        this.values.put("api_key", "283466621357762");
-        this.values.put("api_secret", "UhfsjqmHM_1mML4vZ2BUIArRQ3o");
+        Map<String, String> values = new HashMap<>();
+        values.put("cloud_name", "dlv3mg6uk");
+        values.put("api_key", "283466621357762");
+        values.put("api_secret", "UhfsjqmHM_1mML4vZ2BUIArRQ3o");
         this.cloudinary = new Cloudinary(values);
     }
     public Map upPhoto(MultipartFile multipartFile) throws IOException {

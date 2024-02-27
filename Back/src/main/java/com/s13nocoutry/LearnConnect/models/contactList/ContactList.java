@@ -26,5 +26,5 @@ public class ContactList {
     private User user;
 
     @OneToMany
-    private Set<User> userList = new HashSet<>();;
+    private Set<User> users = new HashSet<>();;
 }
