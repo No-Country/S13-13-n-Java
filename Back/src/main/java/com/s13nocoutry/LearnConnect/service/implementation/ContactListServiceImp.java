@@ -25,6 +25,10 @@ public class ContactListServiceImp implements ContactListService {
     }
 
     @Override
+    public ContactList getByUserId(Long id) {
+        return contactListRepository.findByUser_Id(id);
+    }
+    @Override
     public List<ContactListResponse> getAllContactList() {
         List<ContactListResponse> contactListResponses = new ArrayList<>();
         for (ContactList contactList : contactListRepository.findAll()) {
@@ -46,9 +50,8 @@ public class ContactListServiceImp implements ContactListService {
     }
 
     @Override
-    public ContactListResponse delete(ContactListRequest contactListRequest) {
-        contactListRepository.delete(modelMapper.map(contactListRequest, ContactList.class));
-        return modelMapper.map(contactListRequest, ContactListResponse.class);
+    public void delete(Long id) {
+        contactListRepository.deleteById(id);
     }
 
     @Override

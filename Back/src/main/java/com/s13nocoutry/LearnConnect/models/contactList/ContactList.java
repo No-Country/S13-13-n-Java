@@ -12,8 +12,7 @@ import java.util.Set;
 @Table(name = "contact-list")
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 @Builder
 public class ContactList {
     @Id
@@ -26,5 +25,6 @@ public class ContactList {
     private User user;
 
     @OneToMany
-    private Set<User> users = new HashSet<>();;
+    private Set<User> users = new HashSet<>();
+    //private List<User> userList = new ArrayList<>();
 }

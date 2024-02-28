@@ -16,5 +16,5 @@ public class MessageResponse {
     private String content;
     private User user;
     private Date hour;
-    private Chat chat;
+    private Long chat;
 }
