@@ -23,8 +23,6 @@ public class User {
     private String password;
     private String state;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private ContactList contactList;
     @ManyToMany(mappedBy = "users")
     private List<Room> rooms;
 }

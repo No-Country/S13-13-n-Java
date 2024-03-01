@@ -14,5 +14,6 @@ public interface ContactListService {
     ContactListResponse update(Long id, ContactListRequest contactListRequest);
     void delete(Long id);
     boolean existsById(Long id);
+    public ContactListResponse addContact(Long userId, Long contactId);
 
 }

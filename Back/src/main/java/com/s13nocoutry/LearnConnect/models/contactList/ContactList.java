@@ -5,7 +5,9 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -21,10 +23,9 @@ public class ContactList {
     private Long id;
 
     @OneToOne
-    @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany
-    private Set<User> users = new HashSet<>();
-    //private List<User> userList = new ArrayList<>();
+    @ManyToMany
+    //private Set<User> users = new HashSet<>();
+    private List<User> userList = new ArrayList<>();
 }
