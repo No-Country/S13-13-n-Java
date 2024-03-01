@@ -5,6 +5,7 @@ import { ColumnRightRoutingModule } from './column-right-routing.module';
 import { ColumnRightComponent } from './column-right.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProfileModule } from '../profile/profile.module';
+import { ContactConnectedModule } from '../contact-connected/contact-connected.module';
 
 
 
@@ -15,6 +16,7 @@ import { ProfileModule } from '../profile/profile.module';
   imports: [
     CommonModule,
     ColumnRightRoutingModule,
+    ContactConnectedModule,
     ProfileModule,
     SharedModule
   ],

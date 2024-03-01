@@ -20,6 +20,8 @@
     "@angular/router": "^16.2.0",
     "reset-css": "^5.0.2",
     "rxjs": "~7.8.0",
+    "socketjs-client": "^1.0.2",
+    "stompjs": "^2.3.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
@@ -27,6 +29,8 @@
     "@angular-devkit/build-angular": "^16.2.1",
     "@angular/cli": "~16.2.1",
     "@angular/compiler-cli": "^16.2.0",
+    "@capacitor/cli": "5.7.0",
+    "@ionic/angular-toolkit": "latest",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",

@@ -16,6 +16,7 @@ const routes: Routes =[
       { path: 'contact-book', loadChildren: () => import('./contact-book/contact-book.module').then(m => m.ContactBookModule) }
     ]
   },
+  { path: 'contact-connected', loadChildren: () => import('./contact-connected/contact-connected.module').then(m => m.ContactConnectedModule) },
 
 
 

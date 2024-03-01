@@ -2,25 +2,25 @@
   <div>
     <img src="../../../assets/logo/small/IsologoLC_small.svg" class="logo">
 
-    <button routerLink="/chat-list" ><img src="./assets/icons/chats.svg" alt="Mensajes" width="30px" height="30px"></button>
-    <button routerLink="/contact-book" ><img src="./assets/icons/contacts.svg" alt="Contactos" width="30px" height="30px"></button>
+    <button (click)="showComponent1()" id="chats-icon"><img src="./assets/icons/chats.svg" alt="Mensajes" width="30px" height="30px" ></button>
+    <button (click)="showComponent2()"  id="contacts-icons"><img src="./assets/icons/contacts.svg" alt="Contactos" width="30px" height="30px"></button>
   </div>
 
   <div>
       <hr width="40px">
 
-      <button routerLink="/profile" style="margin-bottom: 1rem;"><img src="./assets/icons/user.svg" alt="Perfil" width="30px" height="30px"></button>
+      <button (click)="prueba()" style="margin-bottom: 1rem;"><img src="./assets/icons/user.svg" alt="Perfil" width="30px" height="30px"></button>
 
 
       <div>
         <input type="checkbox" id="themeSwitch" (change)="toggleTheme()">
         <label for="themeSwitch" class="switch">
-          <img src="./assets/icons/sun.svg" alt="sun_icon" class="sun-icon" width="20px">
-          <img src="./assets/icons/moon.svg" alt="moon_icon" class="moon-icon" width="20px">
+          <img src="../../../assets/icons/sun.svg" alt="sun_icon" class="sun-icon" width="20px">
+          <img src="../../../assets/icons/moon.svg" alt="moon_icon" class="moon-icon" width="20px">
 
         </label>
       </div>
 
-      <button routerLink="/login" style="margin-bottom: 1rem;"><img src="./assets/icons/logout.svg" alt="Perfil" width="30px" height="30px"></button>
+      <button routerLink="/login" style="margin-bottom: 1rem;"><img src="../../../assets/icons/logout.svg" alt="Perfil" width="30px" height="30px"></button>
   </div>
 </nav>
