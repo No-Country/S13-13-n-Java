@@ -3,5 +3,5 @@ export interface Profile {
   estado: string;
   imagenPerfil: string;
   descripcion: string;
-  mostrarInformacionAdicional: boolean;
+
 }

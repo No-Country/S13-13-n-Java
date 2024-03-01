@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ChatMessage } from 'src/app/interfaces/chat-message';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ViewsService } from 'src/app/services/views.service';
+import { SidebarService } from 'src/app/services/sidebar.service';
 //import { ChatService } from '../../services/chat.service';
 
 @Component({
@@ -18,15 +18,21 @@ export class ChatRoomComponent implements OnInit{
   searchForm: any = FormGroup;
 searchCriteria: any = '';
 
+currentComponent: any;
+currentComponent1: any;
+
 
 ///////
 
-  constructor(/* private chatService: ChatService */ private fb: FormBuilder, private viewsService: ViewsService) {
+  constructor(/* private chatService: ChatService */ private fb: FormBuilder, private sidebarService: SidebarService) {
       this.searchForm = this.fb.group({
         searchCriteria: [''], // Inicializa el campo de búsqueda
       });
       /////////////////
-
+      this.sidebarService.currentComponent$.subscribe(component => {
+        this.currentComponent = component;
+      });
+      
     }
 
 
@@ -40,7 +46,7 @@ searchCriteria: any = '';
       this.updateSearch();
     }); */
 
-  
+
   }
 
   updateSearch() {

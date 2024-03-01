@@ -7,7 +7,12 @@
       <!-- <div *ngIf="isLoading; else chatList">
         <app-loader></app-loader>
       </div> -->
+      <div *ngIf="currentComponent === 'chat-list'">
+        <app-chat-list ></app-chat-list>
+      </div>
+      <div *ngIf="currentComponent === 'contact-list'">
       <app-contact-book></app-contact-book>
+      </div>
       <!-- <app-chat-list ></app-chat-list> -->
       <!-- <ng-template #chatList>
         <app-chat-list></app-chat-list>
@@ -114,7 +119,9 @@
   </div>
 
   <div class="sidebar-right">
+    
     <app-column-right></app-column-right>
+    <!-- <app-contact-connected></app-contact-connected> -->
     <!--     <div class="contact">
       <app-profile></app-profile>
     </div>

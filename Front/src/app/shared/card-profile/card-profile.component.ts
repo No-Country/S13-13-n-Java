@@ -13,7 +13,7 @@ export class CardProfileComponent {
     estado: "Online",
     imagenPerfil: "https://i.imgur.com/75y797L.jpg",
     descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  mostrarInformacionAdicional: false,
+
   };
 
 }
