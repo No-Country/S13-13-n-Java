@@ -5,15 +5,16 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name = "contact-list")
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 @Builder
 public class ContactList {
     @Id
@@ -22,9 +23,9 @@ public class ContactList {
     private Long id;
 
     @OneToOne
-    @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany
-    private Set<User> users = new HashSet<>();;
+    @ManyToMany
+    //private Set<User> users = new HashSet<>();
+    private List<User> userList = new ArrayList<>();
 }
