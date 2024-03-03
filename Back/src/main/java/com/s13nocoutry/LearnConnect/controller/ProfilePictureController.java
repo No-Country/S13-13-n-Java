@@ -12,7 +12,7 @@ import java.io.IOException;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/profile-photo")
+@RequestMapping("/profile-photos")
 public class ProfilePictureController {
     private final ProfilePictureService profilePictureService;
 
