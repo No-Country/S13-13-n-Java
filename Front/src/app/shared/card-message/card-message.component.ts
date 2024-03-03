@@ -1,14 +1,18 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { RandomUserService } from 'src/app/services/random-user.service';
 
 @Component({
   selector: 'app-card-message',
   templateUrl: './card-message.component.html',
   styleUrls: ['./card-message.component.css']
 })
-export class CardMessageComponent {
-  @Input() cardContent!: string;
-  @Input() sender!: string;
+export class CardMessageComponent{
+  /* @Input() cardContent!: string;*/
+  @Input() randomUser!: any;
 
-  constructor() { }
+
+  constructor(private randomUserService: RandomUserService) { }
+
+
 
 }

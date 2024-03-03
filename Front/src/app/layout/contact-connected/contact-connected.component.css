@@ -1,84 +1,63 @@
-.connected {
-  border-radius: 0 35px 35px 0;
-  max-height: 84vh;
+.connected2 {
+	border-radius: 0 35px 35px 0;
+	max-height: 84vh;
 }
 
-.contact-list{
-  overflow-y: scroll;
- max-height: calc(45vh - 74px);/* Height of the header (73px) + Padding top and bottom (16px * 2 = 32px)*/
-
+.contact-profile2 {
+	display: flex;
+	align-content: flex-end;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0 0 1rem 1rem;
+	padding-top: 1rem;
 }
 
-@media screen and (min-height:780px) {
-.contact-list{
-  max-height: calc(60vh - 74px);
-}
+.name-contact {
+	margin-left: 1rem;
 }
 
-/* ///////////////////////////// */
-.contact-profile{
-  display: flex;
-  align-content: flex-end;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-/*   margin-top: 1rem; */
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  padding-top: 1rem;
+.title-contact {
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: left;
+	color: var(--LM-Light);
+	font-weight: bold;
 }
 
-.name-status{
-  margin-left: 1rem;
+.count-contact {
+	font-family: "Nanum Pen Script", cursive;
+	font-weight: 400;
+	font-size: 16px;
+	text-align: left;
+	color: var(--Secondary-Normal);
 }
 
-.contact-name {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  text-align: left;
-  color: var(--LM-Light);
-  font-weight: bold;
-  align-items: flex-start;
+.contact-list2 {
+	overflow-y: scroll;
+	scrollbar-color: var(--DM-Dark) var(--DM-Normal-hover);
+	scrollbar-width: thin;
+	max-height: calc(45vh - 74px);
 }
 
-.contact-status {
-  font-family: "Nanum Pen Script", cursive;
-  font-weight: 400;
-  font-size: 16px;
-  text-align: left;
-  color:var(--Primary-Normal)
-}
-/* ///////////////////////////////////// */
-
-.connected-item {
-  height: 15%;
-    display: flex;
-    align-items: center;
-    padding: 5px 5px 6px;
-    justify-content: space-between;
-
-    flex-wrap: wrap;
-    flex-direction: row;
+@media screen and (min-height: 780px) {
+	.contact-list2 {
+		max-height: calc(60vh - 74px);
+	}
 }
 
-.connected-icon {
-  width: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.connected-item2 {
+	height: 15%;
+	display: flex;
+	align-items: center;
+	padding: 5px 5px 6px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: row;
 }
 
-.connected-name {
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.images {
+	height: 25%;
+	margin: 0 4px;
 }
-
- .images {
-  height: 25%;
-  margin:0 4px;
-
-}
-

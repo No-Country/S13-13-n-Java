@@ -19,6 +19,7 @@ import { ContactConnectedModule } from '../contact-connected/contact-connected.m
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     ChatRoomRoutingModule,
     ChatListModule,
     ProfileModule,

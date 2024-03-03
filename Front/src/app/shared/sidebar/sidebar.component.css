@@ -35,10 +35,9 @@ button {
 
 #chats-icon:hover img, #chats-icon:active img {
 
+filter: grayscale(100%) sepia(90%) saturate(10000%) hue-rotate(335deg);}
 
-filter: grayscale(100%) sepia(90%) saturate(10000%) hue-rotate(0deg);}
-
-#contacts-icons:hover img, #contacts-icons:active img {filter: grayscale(100%) sepia(100%) saturate(10000%) hue-rotate(0deg);}
+#contacts-icons:hover img, #contacts-icons:active img {filter: grayscale(100%) sepia(100%) saturate(10000%) hue-rotate(335deg);}
 
 
 hr{
