@@ -1,235 +1,176 @@
-.card {
-  width: auto;
-  margin: 2px;
-  padding: 0;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+.contact-profile3 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
-.card-header {
-  padding: 10px;
-  background-color: #f7f7f7;
+.name-status3 {
+	margin-left: 1rem;
+	color: var(--Secondary-Normal);
 }
 
-.card-header h2 {
-  margin-top: 0;
-  margin-bottom: 5px;
-  font-size: 16px;
+.contact-name3 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: left;
+	font-weight: bold;
+	color: var(--LM-Light);
+	align-items: flex-start;
 }
 
-.card-header p {
-  margin-top: 0;
-  font-size: 14px;
-  color: #999;
+.contact-status3 {
+	font-family: "Nanum Pen Script", cursive;
+	font-weight: 400;
+	font-size: 16px;
+	text-align: left;
+	color: #35b285;
 }
 
-.card-header::before{
-  content: '🟢 ';
-  font-size: 0.7em;
-  margin-left: 4px;
-  transform: scale(2);
-  line-height: 1em;
+.contact-status3::before {
+	content: '🟢 ';
+	font-size: 0.7em;
+	margin-left: 4px;
+	transform: scale(2);
+	line-height: 1em;
 }
-
-.card-body {
-  padding: 10px;
-}
-
-.card-body img {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.card-body p {
-  margin-top: 0;
-  font-size: 14px;
-}
-
-.card:hover .card-body {
-  background-color: #f7f7f7;
-}
-
-/* ///////////////////////////////////////////////// */
-
-.contact-profile{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.name-status{
-  margin-left: 1rem;
-  color: var(--Secondary-Normal);
-}
-
-.contact-name {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  text-align: left;
-
-  font-weight: bold;
-  color: var(--LM-Light);
-  align-items: flex-start;
-}
-
-.contact-status {
-  font-family: "Nanum Pen Script", cursive;
-  font-weight: 400;
-  font-size: 16px;
-  text-align: left;
-  color: #35b285;
-}
-
-.contact-status::before{
-  content: '🟢 ';
-  font-size: 0.7em;
-  margin-left: 4px;
-  transform: scale(2);
-  line-height: 1em;
-}
-/* Estilos generales */
-
 
 .container-profile {
-  width: 100%;
-  height: calc(100% - 100px);
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-
-  flex-wrap: nowrap;
-  flex-direction: row;
-  position: absolute;
-  right: 0;
-  top: 0;
+	width: 100%;
+	height: calc(100% - 100px);
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
 .formulario {
-  padding: 20px;
-  border-radius: 35px;
-  margin: 1rem;
-  width: 21%;
-  background-color: var(--DM-Normal-hover);
-  padding: 1rem !important;
-
+	padding: 20px;
+	border-radius: 35px;
+	margin: 1rem;
+	width: 21%;
+	background-color: var(--DM-Normal-hover);
+	padding: 1rem;
 }
 
-h1 {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 10px;
+#label-nombre3,
+#label-email3,
+#label-pass3,
+#label-description3 {
+	display: block;
+	color: var(--LM-Normal);
+	margin-top: 20px;
+	margin-bottom: 5px;
 }
 
-/* Estilos para los campos del formulario */
-label {
-  display: block;
-  color:var(--LM-Normal);
-  margin-top: 5px;
-  margin-bottom: 5px;
+#label-nombre3{
+  margin-top: 2rem;
 }
 
-input {
-  font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:100%;
-  color:var(--LM-Normal);
-  border:none !important;
-  border-bottom:1px solid #757575 !important;
-  background: transparent;
+#nombre3,
+#email3,
+#contraseña3 {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 100%;
+	color: var(--LM-Normal);
+	border: none;
+	border-bottom: 1px solid #757575;
+	background: transparent;
 }
+
 input:focus {
-   outline:none;
+	outline: none;
 }
 
 textarea {
-  width: 100%;
-  background: transparent;
-  height:  calc(7em + 8px);
-  padding: 10px;
-  margin-top: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-textarea#descripcion{
-  color:var(--LM-Normal);
+	width: 100%;
+	background: transparent;
+	height: 150px;
+	padding: 10px;
+	margin-top: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	margin-bottom: 10px;
+  overflow:hidden;
+	color: var(--LM-Normal);
 }
 
 .imagen {
-  text-align: center;
-  width:100px;
-  margin: auto;
-  position: relative;
+	text-align: center;
+	width: 100px;
+	margin: auto;
+	position: relative;
 }
 
 .imagen .photo {
-  height: 100px;
-  width:100px;
-  border-radius: 50%;
-  border: 4px solid var(--Important-Normal);
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	border: 4px solid var(--Important-Normal);
 }
 
-.imagen .round{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 36px;
-  height: 36px;
-  line-height: 33px;
-  text-align: center;
-  border-radius: 50%;
-  background: var(--LM-Normal);
-  overflow: hidden;
+.imagen .round {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 36px;
+	height: 36px;
+	line-height: 33px;
+	text-align: center;
+	border-radius: 50%;
+	background: var(--LM-Normal);
+	overflow: hidden;
 }
 
-button .back-icon{
-  width:10px;
-  height:10px;
+button .back-icon {
+	width: 10px;
+	height: 10px;
 }
 
 .imagen .round input[type="file"] {
-  position: absolute;
-    transform: scale(2);
-    opacity: 0;
+	position: absolute;
+	transform: scale(2);
+	opacity: 0;
 }
 
 .botones {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  gap: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	flex-wrap: nowrap;
+	gap: 30px;
 }
 
 button {
-  padding: 4px;
-
-  border-radius: 50%;
-  cursor: pointer;
+	padding: 4px;
+	border-radius: 50%;
+	cursor: pointer;
 }
 
 .aceptar {
-  border: 2px solid var(--Important-Dark);
-  background: linear-gradient(180deg, var(--Important-Dark-hover), var(--Important-Dark));
-  color: #fff;
+	border: 2px solid var(--Important-Dark);
+	background: linear-gradient(180deg, var(--Important-Dark-hover), var(--Important-Dark));
+	color: #fff;
 }
 
 .aceptar:hover {
-  background: linear-gradient(180deg, var(--Important-Darker), var(--Important-Dark));
+	background: linear-gradient(180deg, var(--Important-Darker), var(--Important-Dark));
 }
 
 .cancelar {
-  border: 2px solid var(--Primary-Dark);
-  background: linear-gradient(180deg, var(--Primary-Dark-hover), var(--Primary-Dark));
-  color: #fff;
+	border: 2px solid var(--Primary-Dark);
+	background: linear-gradient(180deg, var(--Primary-Dark-hover), var(--Primary-Dark));
+	color: #fff;
 }
 
 .cancelar:hover {
-  background: linear-gradient(180deg, var(--Primary-Darker), var(--Primary-Dark));
+	background: linear-gradient(180deg, var(--Primary-Darker), var(--Primary-Dark));
 }

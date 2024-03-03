@@ -1,253 +1,125 @@
-/* .contenedor{
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  height: 100vh;
-  background-color: blue;
-  margin: 0;
-  padding: 0;
-  align-content: center;
+.contenedor {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	min-height: 100vh;
+	overflow-y: hidden;
+	gap: 30px;
+	font-size: small;
 }
 
-.form-register{
-  background-color: var(--Light-mode);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 6px;
-  border-radius: 35px;
-  width:40%;
-  padding:60px;
+.title-form,
+.link-l {
+	color: var(--Primary-Normal);
 }
 
-
- #email, #password, #btn-register{
-  padding: 15px;
-  border-radius: 10px;
-  border:none;
-  width: 400px;
-  margin-top: 1rem;
+.link-l {
+	text-decoration: none;
+	font-weight: bold;
 }
 
-#name, #lastname{
-  padding: 15px;
-  border-radius: 10px;
-  border:none;
-
-  margin-top: 1rem;
-}
-
-#btn-register{
-
-  * Created with https://www.css-gradient.com
-  * Gradient link: https://www.css-gradient.com/?c1=af203b&c2=f54868&gt=l&gd=dtl
-
-  background: #af203b;
-  background: linear-gradient(160deg, #af203b, #f54868);
-
-  color: white;
-  box-shadow: rgb(136 1 1) 0 -1px 3px 0 inset, rgb(97 0 0 / 23%) 0 3px 6px 0;
-  box-sizing: border-box;
-
-  cursor: pointer;
-
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  min-height: 56px;
-  min-width: 120px;
-  transition: all .2s cubic-bezier(.22, .61, .36, 1);
-}
-
-#btn-register:hover {
-  background: linear-gradient(160deg, #af203b, #f54868);
-
-  color: white;
-  box-shadow: rgb(136 1 1) 0 -1px 3px 0 inset, rgb(97 0 0 / 23%) 0 3px 6px 0;
-}
-
-
-.link-login{
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-}
-
-.info{
-  margin-top: 1rem;
-  color: gray;
-}
-
-.label-name, .label-lastname, .label-email, .label-pass{
-  color:gray;
-
-}
-
-.name{
-  display: flex;
-  flex-wrap:wrap;
-  justify-content: space-between;
-}
-
-.insert-email, .insert-password{
-  margin-top: 1rem;
-
-}
-
-.title-form, .link-l{
-  color: var(--Primary);
-}
-
-.title-form{
-  font-family: 'Nanum Pen Script', cursive;
-  font-size: 60px;
-  font-weight: 500;
-  line-height: 24px;
-margin-bottom: 30px;
-}
-
-.link-r{
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-}
- */
-
- /* @import "../../../../../node_modules/reset-css/reset.css"; */
-
-.contenedor{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  min-height: 100vh;
-  overflow-y: hidden;
-  gap:30px;
-  font-size:small;
-}
-
-.title-form, .link-l{
-  color: var(--Primary-Normal);
-}
-
-.link-l{
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.logo-con-frase{
-  max-width: 80%;
-  height: auto;
-  margin-bottom: 200px;
+.logo-con-frase {
+	max-width: 80%;
+	height: auto;
+	margin-bottom: 200px;
 }
 
 @media screen and (max-width: 768px) {
+	.logo-con-frase {
+		max-width: 70%;
+		height: auto;
+		margin-left: 2rem;
+		margin-right: 2rem;
+		margin-bottom: 0;
+	}
 
-.logo-con-frase{
-
-  max-width: 70%;
-  height: auto;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 0;
+	.name {
+		flex-direction: column;
+	}
 }
 
-.name{
-  flex-direction: column;
+.box-register {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
+.title-form {
+	font-family: 'Nanum Pen Script', cursive;
+	font-size: xxx-large;
+	font-size: -webkit-xxx-large;
+	margin-bottom: 1rem;
 }
 
-.box-register{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.link-login {
+	text-align: center;
 }
 
-.title-form{
-  font-family: 'Nanum Pen Script', cursive;
-  font-size: xxx-large;
-  font-size: -webkit-xxx-large;
-    margin-bottom: 1rem;
+.form-register {
+	background-color: var(--LM-Normal);
+	padding: 1.5rem;
+	border-radius: 35px;
 }
 
-.link-login{
-  text-align:center;
+.name {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
-.form-register{
-  background-color: var(--LM-Normal);
-  padding:1.5rem;
-  border-radius:35px;
-}
-
-.name{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-}
-
-.names, .lastnames{
-  min-width: 49%!important;
+.names,
+.lastnames {
+	min-width: 49%;
 }
 
 @media screen and (max-width: 764px) {
-#name, #lastname{
-  min-width: 100%;
-}
-}
-
-#name, #lastname, #email, #password, #btn-register{
-padding: 1rem;
-border-radius: 10px;
-border:none;
-margin-bottom: 0.5rem;
-width: 100%;
-margin-top: 0.5rem;
+	#name,
+	#lastname {
+		min-width: 100%;
+	}
 }
 
+#name,
+#lastname,
+#email,
+#password,
+#btn-register {
+	padding: 1rem;
+	border-radius: 10px;
+	border: 0;
+	margin-bottom: .5rem;
+	width: 100%;
+	margin-top: .5rem;
+}
 
-
-#btn-register{
-/*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=af203b&c2=f54868&gt=l&gd=dtl
-*/
-background: #af203b;
-background: linear-gradient(160deg, #af203b, #f54868);
-
-color: white;
-box-shadow: rgb(136 1 1) 0 -1px 3px 0 inset, rgb(97 0 0 / 23%) 0 3px 6px 0;
-box-sizing: border-box;
-
-cursor: pointer;
-
-font-size: 18px;
-font-weight: 700;
-line-height: 24px;
-min-height: 56px;
-min-width: 120px;
-transition: all .2s cubic-bezier(.22, .61, .36, 1);
+#btn-register {
+	background: #af203b;
+	background: linear-gradient(160deg, #af203b, #f54868);
+	color: white;
+	box-shadow: #888 0 -1px 3px 0 inset, rgb(97 0 0 / 23%) 0 3px 6px 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+	min-height: 56px;
+	min-width: 120px;
+	transition: all .2s cubic-bezier(.22, .61, .36, 1);
 }
 
 #btn-register:hover {
-background: linear-gradient(160deg, #af203b, #f54868);
-
-color: white;
-box-shadow: rgb(136 1 1) 0 -1px 3px 0 inset, rgb(97 0 0 / 23%) 0 3px 6px 0;
+	background: linear-gradient(160deg, #af203b, #f54868);
+	color: white;
+	box-shadow: #888 0 -1px 3px 0 inset, rgb(97 0 0 / 23%) 0 3px 6px 0;
 }
 
-
-
-
-.label-name, .label-lastname, .label-email, .label-pass{
-  color: var(--DM-Dark);
-}
- .info{
-color:gray;
-
+.label-name,
+.label-lastname,
+.label-email,
+.label-pass {
+	color: var(--DM-Dark);
 }
 
-
+.info {
+	color: gray;
+}

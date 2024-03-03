@@ -2,29 +2,8 @@
   max-height: 75vh;
 
   overflow-y: scroll;
- 
+  scrollbar-color: var(--DM-Dark) var(--DM-Normal-hover);
+scrollbar-width: thin;
+
 }
 
-.scroll-button {
- display:flex;
- justify-content: center;
- align-self: auto;
- position: absolute;
- top: 90%;
- right: 0;
- transform: translateY(-50%);
- z-index: 1;
-
- margin: auto;
-  background-color: #ccc;
-  border: none;
-  color: #888;
-  font-size: 20px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.scroll-button:hover {
-  background-color: #888;
-  color: #fff;
-}
