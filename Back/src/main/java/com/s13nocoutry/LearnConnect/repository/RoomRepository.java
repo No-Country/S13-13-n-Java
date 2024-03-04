@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RoomRepository extends JpaRepository<Room, Long> {
+    //DELETE FROM `learnconnect`.`room_user` WHERE (`room_id` = '1');
 }

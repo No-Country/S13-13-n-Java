@@ -2,10 +2,12 @@ package com.s13nocoutry.LearnConnect.service.implementation;
 
 import com.s13nocoutry.LearnConnect.models.contactList.ContactList;
 import com.s13nocoutry.LearnConnect.models.contactList.ContactListRequest;
+import com.s13nocoutry.LearnConnect.models.room.Room;
 import com.s13nocoutry.LearnConnect.models.user.User;
 import com.s13nocoutry.LearnConnect.models.user.UserRequest;
 import com.s13nocoutry.LearnConnect.models.user.UserResponse;
 import com.s13nocoutry.LearnConnect.repository.ContactListRepository;
+import com.s13nocoutry.LearnConnect.repository.RoomRepository;
 import com.s13nocoutry.LearnConnect.repository.UserRepository;
 import com.s13nocoutry.LearnConnect.service.abstraction.ContactListService;
 import com.s13nocoutry.LearnConnect.service.abstraction.UserService;
@@ -26,6 +28,7 @@ public class UserServiceImp implements UserService {
     private final ModelMapper modelMapper;
     private final ContactListService contactListService;
     private final ContactListRepository contactListRepository;
+    private final RoomRepository roomRepository;
 
     @Override
     public UserResponse getById(Long id) throws EntityNotFoundException {
@@ -75,6 +78,10 @@ public class UserServiceImp implements UserService {
         contactListRepository.deleteContactListUser(contactList.getId());
         contactListRepository.deleteUserListContactList(user.getId());
         contactListService.delete(contactList.getId());
+        for (Room room : user.getRooms()) {
+            //if (room.getId().equals(roomId)) {
+            roomRepository.deleteById(room.getId());
+        }
         userRepository.delete(user);
 
     }//TODO despues revisar como eliminar

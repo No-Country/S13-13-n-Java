@@ -1,5 +1,6 @@
 package com.s13nocoutry.LearnConnect.models.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.s13nocoutry.LearnConnect.models.contactList.ContactList;
 import com.s13nocoutry.LearnConnect.models.room.Room;
 import jakarta.persistence.*;
@@ -24,5 +25,6 @@ public class User {
     private String state;
 
     @ManyToMany(mappedBy = "users")
+    @JsonIgnore
     private List<Room> rooms;
 }
