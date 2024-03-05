@@ -1,5 +1,6 @@
 package com.s13nocoutry.LearnConnect.controller;
 
+import com.s13nocoutry.LearnConnect.models.profilePicture.ProfilePicture;
 import com.s13nocoutry.LearnConnect.models.profilePicture.ProfilePictureResponse;
 import com.s13nocoutry.LearnConnect.service.abstraction.ProfilePictureService;
 import lombok.RequiredArgsConstructor;
@@ -22,7 +23,7 @@ public class ProfilePictureController {
     }
 
     @PostMapping("/upload")
-    public ResponseEntity<ProfilePictureResponse> uploadProfilePicture(@RequestParam("photo") MultipartFile multipartFile) throws IOException {
+    public ResponseEntity<ProfilePicture> uploadProfilePicture(@RequestParam("photo") MultipartFile multipartFile) throws IOException {
         return new ResponseEntity<>(profilePictureService.create(multipartFile), HttpStatus.CREATED);
     }
 

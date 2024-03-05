@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProfilePictureRepository extends JpaRepository<ProfilePicture, Long> {
+    ProfilePicture findByUser_id(Long id);
 }

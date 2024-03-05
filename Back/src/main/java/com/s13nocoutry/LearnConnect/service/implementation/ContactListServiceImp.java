@@ -71,8 +71,11 @@ public class ContactListServiceImp implements ContactListService {
 
     @Override
     public ContactListResponse addContact(Long userId, Long contactId){
+        //Obtengo la lista de contactos del usuario
         ContactList contactList = contactListRepository.findByUser_Id(userId);
+        //Obtengo el contacto a agregar
         User user = userRepository.findById(contactId).orElseThrow(() -> new EntityNotFoundException("Usuario No encontrado"));
+        //agrego el contacto a la lista de contactos del usuario
         contactList.getUserList().add(user);
         //-----------------creacion de room
         Room room = new Room();
