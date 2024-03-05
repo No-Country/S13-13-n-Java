@@ -25,7 +25,7 @@ LearnConnect es una aplicación de mensajería diseñada específicamente para e
 ### Diagrama UML
 
 <div align="left">
-    <img width="60%" src="https://github.com/No-Country/c13-02-n-java-react/assets/103857812/00bf3f5a-adbd-4868-8311-f1aba0612b63.png">
+    <img width="60%" src="https://github.com/No-Country/S13-13-n-Java/blob/david/img/uml.png">
 </div>
 
 ### Tecnologías aplicadas
