@@ -1,5 +1,6 @@
 package com.s13nocoutry.LearnConnect.models.user;
 
+import com.s13nocoutry.LearnConnect.models.profilePicture.ProfilePictureRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,5 +14,6 @@ public class UserRequest {
     private Long id;
     private String email;
     private String password;
-    private String state;
+    private String description;
+    private ProfilePictureRequest profilePictureRequest;
 }

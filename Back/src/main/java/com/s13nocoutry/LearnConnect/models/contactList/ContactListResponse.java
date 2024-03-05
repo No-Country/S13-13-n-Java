@@ -4,6 +4,7 @@ import com.s13nocoutry.LearnConnect.models.user.User;
 import com.s13nocoutry.LearnConnect.models.user.UserResponse;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -15,7 +16,7 @@ import java.util.Set;
 public class ContactListResponse {
     private Long id;
     private Long userId;
-    private List<UserResponse> contacts;
+    private List<UserResponse> contacts = new ArrayList<>();
 
 
 }

@@ -28,7 +28,7 @@ public class ProfilePictureServiceImp implements ProfilePictureService {
     }
 
     @Override
-    public ProfilePictureResponse create(MultipartFile multipartFile) throws IOException {
+    public ProfilePicture create(MultipartFile multipartFile) throws IOException {
         Map value = cloudinaryService.upPhoto(multipartFile);
         ProfilePictureResponse profilePictureResponse = ProfilePictureResponse
                 .builder()
@@ -43,7 +43,7 @@ public class ProfilePictureServiceImp implements ProfilePictureService {
                 .url(value.get("url").toString())
                 .build();
         profilePictureRepository.save(profilePicture);
-        return profilePictureResponse;
+        return profilePicture;
     }
 
     @Override
@@ -68,14 +68,8 @@ public class ProfilePictureServiceImp implements ProfilePictureService {
         ProfilePicture profilePicture = profilePictureRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Foto no encontrada en base de datos con id: " + id));
         String publicId = profilePicture.getPublicId();
         Map value = cloudinaryService.deletePhoto(publicId);
-        ProfilePictureResponse profilePictureResponse = ProfilePictureResponse
-                .builder()
-                .publicId(value.get("public_id").toString())
-                .name(value.get("original_filename").toString())
-                .url(value.get("url").toString())
-                .build();
         profilePictureRepository.delete(profilePicture);
-        return profilePictureResponse;
+        return null;
     }
 
     @Override

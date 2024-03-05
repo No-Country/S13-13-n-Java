@@ -4,8 +4,12 @@ import com.s13nocoutry.LearnConnect.models.Chat.Chat;
 import com.s13nocoutry.LearnConnect.models.Chat.ChatResponse;
 import com.s13nocoutry.LearnConnect.models.Message.Message;
 import com.s13nocoutry.LearnConnect.models.Message.MessageResponse;
+import com.s13nocoutry.LearnConnect.models.contactList.ContactList;
+import com.s13nocoutry.LearnConnect.models.contactList.ContactListResponse;
 import com.s13nocoutry.LearnConnect.models.photo.Photo;
 import com.s13nocoutry.LearnConnect.models.photo.PhotoResponse;
+import com.s13nocoutry.LearnConnect.models.user.User;
+import com.s13nocoutry.LearnConnect.models.user.UserResponse;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.context.annotation.Bean;
@@ -24,9 +28,12 @@ public class AppConfig {
         modelMapper.createTypeMap(Chat.class, ChatResponse.class)
                 .addMapping(src -> src.getMessages(), ChatResponse::setMessages)
                 .addMapping(src -> src.getPhotos(), ChatResponse::setPhotos);
+        modelMapper.createTypeMap(ContactList.class, ContactListResponse.class)
+                .addMapping(src -> src.getUserList(), ContactListResponse::setContacts);
 
         modelMapper.createTypeMap(Message.class, MessageResponse.class);
         modelMapper.createTypeMap(Photo.class, PhotoResponse.class);
+        modelMapper.createTypeMap(User.class, UserResponse.class);
 
 
         /*

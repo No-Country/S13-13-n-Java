@@ -1,10 +1,13 @@
 package com.s13nocoutry.LearnConnect.service.implementation;
 
+import com.s13nocoutry.LearnConnect.models.Chat.Chat;
 import com.s13nocoutry.LearnConnect.models.contactList.ContactList;
 import com.s13nocoutry.LearnConnect.models.contactList.ContactListRequest;
 import com.s13nocoutry.LearnConnect.models.contactList.ContactListResponse;
+import com.s13nocoutry.LearnConnect.models.room.Room;
 import com.s13nocoutry.LearnConnect.models.user.User;
 import com.s13nocoutry.LearnConnect.repository.ContactListRepository;
+import com.s13nocoutry.LearnConnect.repository.RoomRepository;
 import com.s13nocoutry.LearnConnect.repository.UserRepository;
 import com.s13nocoutry.LearnConnect.service.abstraction.ContactListService;
 import jakarta.persistence.EntityNotFoundException;
@@ -22,6 +25,7 @@ public class ContactListServiceImp implements ContactListService {
     private final ContactListRepository contactListRepository;
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
+    private final RoomRepository roomRepository;
 
     @Override
     public ContactListResponse getById(Long id) {
@@ -67,10 +71,26 @@ public class ContactListServiceImp implements ContactListService {
 
     @Override
     public ContactListResponse addContact(Long userId, Long contactId){
+        //Obtengo la lista de contactos del usuario
         ContactList contactList = contactListRepository.findByUser_Id(userId);
+        //Obtengo el contacto a agregar
         User user = userRepository.findById(contactId).orElseThrow(() -> new EntityNotFoundException("Usuario No encontrado"));
+        //agrego el contacto a la lista de contactos del usuario
         contactList.getUserList().add(user);
-        return modelMapper.map(contactListRepository.save(contactList), ContactListResponse.class);
+        //-----------------creacion de room
+        Room room = new Room();
+        List<User> users = new ArrayList<>();
+        users.add(user);
+
+        //room.getUsers().add(user);
+        Optional<User> user2 = userRepository.findById(userId);
+        //room.getUsers().add(user2.get());
+        users.add(user2.get());
+        room.setChat(new Chat());
+        room.setUsers(users);
+        roomRepository.save(room);
+        contactList = contactListRepository.save(contactList);
+        return modelMapper.map(contactList, ContactListResponse.class);
 
 
     }
