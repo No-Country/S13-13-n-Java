@@ -1,3 +1,4 @@
+![LearnConnect](https://github.com/No-Country/S13-13-n-Java/blob/main/img/Cover.png)
 No Country - S13-13-n-Java
 
 # Proyecto "LearnConnect: mensajeria y educación"
@@ -55,15 +56,10 @@ LearnConnect es una aplicación de mensajería diseñada específicamente para e
 |                                                                                                                                                      **Bruno Sturniolo**                                                                                                                                                       |
 | <a href="https://github.com/SturnioloBruno"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://www.linkedin.com/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> |
 
-| <img src="https://avatars.githubusercontent.com/u/100163347?v=4" width=80/>|
-|:-:|
-| **Oliver Yantas Inocente** |
-|<a href="https://github.com/olidevyi"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://www.linkedin.com/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> |
-
 | <img src="https://avatars.githubusercontent.com/u/83872939?v=4" width=80/>|
 |:-:|
 | **David Ramon Thomen** |
-|<a href="https://github.com/DavidLG89"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://www.linkedin.com/in/david-ramon-thomen/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> ||
+|<a href="https://github.com/DavidLG89"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://www.linkedin.com/in/david-ramon-thomen/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> |
 
 
 ## Frontend
@@ -125,7 +121,7 @@ LearnConnect es una aplicación de mensajería diseñada específicamente para e
 
 ### Equipo de ux/ui
 
-|                                                                                                                                  <img src="https://avatars.githubusercontent.com/u/54690832?v=4" width=80/>                                                                                                                                   |
-|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|                                                                                                                                                                 **Fran Noval**                                                                                                                                                                 |
-| <a href="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://www.linkedin.com/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> |
+|                                                                                                                                  <img src="https://github.com/No-Country/S13-13-n-Java/blob/david/img/fran.png" width=80/>                                                                                                                                   |
+|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|                                                                                                                                                                **Fran Noval**                                                                                                                                                                 |
+|                                                  <a href="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a>                                                  |
