@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Profile } from 'src/app/interfaces/profile';
+import { Component, Input, OnInit } from '@angular/core';
+import { RandomUserService } from 'src/app/services/random-user.service';
 
 @Component({
   selector: 'app-card-profile',
@@ -7,13 +7,22 @@ import { Profile } from 'src/app/interfaces/profile';
   styleUrls: ['./card-profile.component.css']
 })
 export class CardProfileComponent {
-  profile: Profile = {
+/*   profile: Profile = {
 
     nombre: "Javi Herrera",
     estado: "Online",
     imagenPerfil: "https://i.imgur.com/75y797L.jpg",
     descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 
-  };
+  }; */
+
+
+
+  @Input() randomUser!: any;
+
+
+  constructor(private randomUserService: RandomUserService) { }
+
+
 
 }

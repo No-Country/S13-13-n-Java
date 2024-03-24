@@ -1,8 +1,9 @@
 .contact-profile{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+ 
   flex-wrap: wrap;
+  color:white;
   align-items: center;
 }
 
@@ -17,7 +18,7 @@
   text-align: left;
 
   font-weight: bold;
-  color: var(--LM-Light);
+  color: white;
   align-items: flex-start;
 }
 
